@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum Constants {
+    static let openAPIKey = " "
+}
+
 struct Constants {
     
     struct Icons {
