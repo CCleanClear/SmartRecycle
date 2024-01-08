@@ -14,6 +14,11 @@ struct ContentView: View {
                 Image(systemName: "square.and.pencil")
                 Text("Notes")
             }).tag(0)
+            
+            MapView().tabItem({
+                Image(systemName: "map")
+                Text("Map")
+            }).tag(1)
         }
     }
 }
