@@ -17,7 +17,7 @@ struct Place: Identifiable {
 
 struct MapView: View {
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.3700556 , longitude: 114.1535941), latitudinalMeters: 4000, longitudinalMeters: 4000)
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.3700556 , longitude: 114.1535941), latitudinalMeters: 3000, longitudinalMeters: 3000)
     
     let annotations = [
         Place(name: "Green in Aberdeen", coordinate: CLLocationCoordinate2D(latitude: 22.24941606003023 , longitude: 114.15454382325527)),
@@ -57,7 +57,7 @@ struct MapView: View {
     ]
     
     var rating: String {
-        return "Green in"
+        return "Recycling Stores"
     }
     
     var body: some View {
