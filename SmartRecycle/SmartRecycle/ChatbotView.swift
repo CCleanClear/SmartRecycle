@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatbotView: View {
     @State var chatMeaasge: [ChatMessage] = ChatMessage.sampleMessage
     @State var messageText:String = ""
+    let openAIService = OpenAISerivce()
     var body: some View {
         VStack {
         ScrollView{
@@ -34,6 +35,9 @@ struct ChatbotView: View {
                 }
             }
             .padding()
+            .onAppear{
+                openAIService.sendMessage(message: "Generate a tagline for an ice cream shop")
+            }
         }
     }
     func messageView(message: ChatMessage) -> some View {
