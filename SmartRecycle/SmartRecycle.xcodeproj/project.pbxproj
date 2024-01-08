@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */; };
+		996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2D922B4BC5E100C7570A /* ContentView.swift */; };
+		996B2D952B4BC5E300C7570A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996B2D942B4BC5E300C7570A /* Assets.xcassets */; };
+		996B2D982B4BC5E300C7570A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996B2D972B4BC5E300C7570A /* Preview Assets.xcassets */; };
+		996B2DA22B4BC5E300C7570A /* SmartRecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DA12B4BC5E300C7570A /* SmartRecycleTests.swift */; };
+		996B2DAC2B4BC5E300C7570A /* SmartRecycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DAB2B4BC5E300C7570A /* SmartRecycleUITests.swift */; };
+		996B2DAE2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DAD2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift */; };
+		996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBA2B4BC60100C7570A /* NotesView.swift */; };
+		996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */; };
+		996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBE2B4BC69700C7570A /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		996B2D9E2B4BC5E300C7570A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 996B2D852B4BC5E100C7570A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 996B2D8C2B4BC5E100C7570A;
+			remoteInfo = SmartRecycle;
+		};
+		996B2DA82B4BC5E300C7570A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 996B2D852B4BC5E100C7570A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 996B2D8C2B4BC5E100C7570A;
+			remoteInfo = SmartRecycle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRecycleApp.swift; sourceTree = "<group>"; };
+		996B2D922B4BC5E100C7570A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		996B2D942B4BC5E300C7570A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		996B2D972B4BC5E300C7570A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		996B2D9D2B4BC5E300C7570A /* SmartRecycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartRecycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		996B2DA12B4BC5E300C7570A /* SmartRecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRecycleTests.swift; sourceTree = "<group>"; };
+		996B2DA72B4BC5E300C7570A /* SmartRecycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartRecycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		996B2DAB2B4BC5E300C7570A /* SmartRecycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRecycleUITests.swift; sourceTree = "<group>"; };
+		996B2DAD2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRecycleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		996B2DBA2B4BC60100C7570A /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		996B2DBE2B4BC69700C7570A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		996B2D8A2B4BC5E100C7570A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2D9A2B4BC5E300C7570A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2DA42B4BC5E300C7570A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		996B2D842B4BC5E100C7570A = {
+			isa = PBXGroup;
+			children = (
+				996B2D8F2B4BC5E100C7570A /* SmartRecycle */,
+				996B2DA02B4BC5E300C7570A /* SmartRecycleTests */,
+				996B2DAA2B4BC5E300C7570A /* SmartRecycleUITests */,
+				996B2D8E2B4BC5E100C7570A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		996B2D8E2B4BC5E100C7570A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */,
+				996B2D9D2B4BC5E300C7570A /* SmartRecycleTests.xctest */,
+				996B2DA72B4BC5E300C7570A /* SmartRecycleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		996B2D8F2B4BC5E100C7570A /* SmartRecycle */ = {
+			isa = PBXGroup;
+			children = (
+				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
+				996B2D922B4BC5E100C7570A /* ContentView.swift */,
+				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
+				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
+				996B2DBE2B4BC69700C7570A /* Constants.swift */,
+				996B2D942B4BC5E300C7570A /* Assets.xcassets */,
+				996B2D962B4BC5E300C7570A /* Preview Content */,
+			);
+			path = SmartRecycle;
+			sourceTree = "<group>";
+		};
+		996B2D962B4BC5E300C7570A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				996B2D972B4BC5E300C7570A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		996B2DA02B4BC5E300C7570A /* SmartRecycleTests */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DA12B4BC5E300C7570A /* SmartRecycleTests.swift */,
+			);
+			path = SmartRecycleTests;
+			sourceTree = "<group>";
+		};
+		996B2DAA2B4BC5E300C7570A /* SmartRecycleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DAB2B4BC5E300C7570A /* SmartRecycleUITests.swift */,
+				996B2DAD2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift */,
+			);
+			path = SmartRecycleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		996B2D8C2B4BC5E100C7570A /* SmartRecycle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 996B2DB12B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycle" */;
+			buildPhases = (
+				996B2D892B4BC5E100C7570A /* Sources */,
+				996B2D8A2B4BC5E100C7570A /* Frameworks */,
+				996B2D8B2B4BC5E100C7570A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartRecycle;
+			productName = SmartRecycle;
+			productReference = 996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		996B2D9C2B4BC5E300C7570A /* SmartRecycleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 996B2DB42B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycleTests" */;
+			buildPhases = (
+				996B2D992B4BC5E300C7570A /* Sources */,
+				996B2D9A2B4BC5E300C7570A /* Frameworks */,
+				996B2D9B2B4BC5E300C7570A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				996B2D9F2B4BC5E300C7570A /* PBXTargetDependency */,
+			);
+			name = SmartRecycleTests;
+			productName = SmartRecycleTests;
+			productReference = 996B2D9D2B4BC5E300C7570A /* SmartRecycleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		996B2DA62B4BC5E300C7570A /* SmartRecycleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 996B2DB72B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycleUITests" */;
+			buildPhases = (
+				996B2DA32B4BC5E300C7570A /* Sources */,
+				996B2DA42B4BC5E300C7570A /* Frameworks */,
+				996B2DA52B4BC5E300C7570A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				996B2DA92B4BC5E300C7570A /* PBXTargetDependency */,
+			);
+			name = SmartRecycleUITests;
+			productName = SmartRecycleUITests;
+			productReference = 996B2DA72B4BC5E300C7570A /* SmartRecycleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		996B2D852B4BC5E100C7570A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					996B2D8C2B4BC5E100C7570A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					996B2D9C2B4BC5E300C7570A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 996B2D8C2B4BC5E100C7570A;
+					};
+					996B2DA62B4BC5E300C7570A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 996B2D8C2B4BC5E100C7570A;
+					};
+				};
+			};
+			buildConfigurationList = 996B2D882B4BC5E100C7570A /* Build configuration list for PBXProject "SmartRecycle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 996B2D842B4BC5E100C7570A;
+			productRefGroup = 996B2D8E2B4BC5E100C7570A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				996B2D8C2B4BC5E100C7570A /* SmartRecycle */,
+				996B2D9C2B4BC5E300C7570A /* SmartRecycleTests */,
+				996B2DA62B4BC5E300C7570A /* SmartRecycleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		996B2D8B2B4BC5E100C7570A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996B2D982B4BC5E300C7570A /* Preview Assets.xcassets in Resources */,
+				996B2D952B4BC5E300C7570A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2D9B2B4BC5E300C7570A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2DA52B4BC5E300C7570A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		996B2D892B4BC5E100C7570A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */,
+				996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */,
+				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
+				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
+				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2D992B4BC5E300C7570A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996B2DA22B4BC5E300C7570A /* SmartRecycleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		996B2DA32B4BC5E300C7570A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996B2DAE2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift in Sources */,
+				996B2DAC2B4BC5E300C7570A /* SmartRecycleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		996B2D9F2B4BC5E300C7570A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 996B2D8C2B4BC5E100C7570A /* SmartRecycle */;
+			targetProxy = 996B2D9E2B4BC5E300C7570A /* PBXContainerItemProxy */;
+		};
+		996B2DA92B4BC5E300C7570A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 996B2D8C2B4BC5E100C7570A /* SmartRecycle */;
+			targetProxy = 996B2DA82B4BC5E300C7570A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		996B2DAF2B4BC5E300C7570A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		996B2DB02B4BC5E300C7570A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		996B2DB22B4BC5E300C7570A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartRecycle/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		996B2DB32B4BC5E300C7570A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartRecycle/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		996B2DB52B4BC5E300C7570A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartRecycle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartRecycle";
+			};
+			name = Debug;
+		};
+		996B2DB62B4BC5E300C7570A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartRecycle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartRecycle";
+			};
+			name = Release;
+		};
+		996B2DB82B4BC5E300C7570A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartRecycle;
+			};
+			name = Debug;
+		};
+		996B2DB92B4BC5E300C7570A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmartRecycleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartRecycle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		996B2D882B4BC5E100C7570A /* Build configuration list for PBXProject "SmartRecycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996B2DAF2B4BC5E300C7570A /* Debug */,
+				996B2DB02B4BC5E300C7570A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		996B2DB12B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996B2DB22B4BC5E300C7570A /* Debug */,
+				996B2DB32B4BC5E300C7570A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		996B2DB42B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996B2DB52B4BC5E300C7570A /* Debug */,
+				996B2DB62B4BC5E300C7570A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		996B2DB72B4BC5E300C7570A /* Build configuration list for PBXNativeTarget "SmartRecycleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996B2DB82B4BC5E300C7570A /* Debug */,
+				996B2DB92B4BC5E300C7570A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 996B2D852B4BC5E100C7570A /* Project object */;
+}
