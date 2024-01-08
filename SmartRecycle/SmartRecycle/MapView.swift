@@ -57,7 +57,7 @@ struct MapView: View {
     ]
     
     var rating: String {
-        return "Recycling Stores"
+        return "Green@Recycling Stores"
     }
     
     var body: some View {

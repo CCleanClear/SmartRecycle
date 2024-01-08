@@ -19,6 +19,11 @@ struct ContentView: View {
                 Image(systemName: "map")
                 Text("Map")
             }).tag(1)
+            
+            ChatbotView().tabItem({
+                Image(systemName: "info.bubble.fill")
+                Text("Info")
+            }).tag(2)
         }
     }
 }

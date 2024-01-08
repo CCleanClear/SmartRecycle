@@ -18,6 +18,7 @@
 		996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */; };
 		996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBE2B4BC69700C7570A /* Constants.swift */; };
 		996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC02B4BC8DD00C7570A /* MapView.swift */; };
+		996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		996B2DBE2B4BC69700C7570A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		996B2DC02B4BC8DD00C7570A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
 				996B2D922B4BC5E100C7570A /* ContentView.swift */,
 				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
+				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
 				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
 				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
 				996B2DBE2B4BC69700C7570A /* Constants.swift */,
@@ -274,6 +277,7 @@
 				996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */,
 				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
+				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
