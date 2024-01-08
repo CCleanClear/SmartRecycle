@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ChatbotView: View {
-    @State var chatMeaasge: [ChatMessage] = ChatMessage.sampleMessage
+    @State var chatMeaasge: [ChatMessage] = []
     @State var messageText:String = ""
     let openAIService = OpenAISerivce()
+    @State var cancellables = Set<AnyCancellable>()
     var body: some View {
         VStack {
         ScrollView{
@@ -19,6 +21,7 @@ struct ChatbotView: View {
                     messageView(message: message)
                 }
             }
+            .padding()
         }
             HStack{
                 TextField("Enter a message", text: $messageText)
@@ -35,9 +38,6 @@ struct ChatbotView: View {
                 }
             }
             .padding()
-            .onAppear{
-                openAIService.sendMessage(message: "Generate a tagline for an ice cream shop")
-            }
         }
     }
     func messageView(message: ChatMessage) -> some View {
@@ -56,8 +56,16 @@ struct ChatbotView: View {
     }
     
     func sendMessage() {
+        let myMessage = ChatMessage(id: UUID().uuidString, content: messageText, dateCreated: Date(), sender: .me)
+        chatMeaasge.append(myMessage)
+        openAIService.sendMessage(message: messageText).sink{completion in
+            // Handle error
+        } receiveValue: { response in
+            guard let textResponse = response.choices.first?.text.trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\""))) else{ return}
+            let gptMessgae = ChatMessage(id: response.id, content: textResponse, dateCreated: Date(), sender: .gpt)
+            chatMeaasge.append(gptMessgae)
+        }.store(in: &cancellables)
         messageText = ""
-        print(messageText)
     }
 }
 
@@ -73,16 +81,8 @@ enum MessageSender {
     case gpt
 }
 
-extension ChatMessage{
-    static let sampleMessage = [
-        ChatMessage(id: UUID().uuidString, content: "Sample Message From me", dateCreated: Date(), sender: .me),
-        ChatMessage(id: UUID().uuidString, content: "Sample Message From gpt", dateCreated: Date(), sender: .gpt),
-        ChatMessage(id: UUID().uuidString, content: "Sample Message From me", dateCreated: Date(), sender: .me),
-        ChatMessage(id: UUID().uuidString, content: "Sample Message From gpt", dateCreated: Date(), sender: .gpt)
-    ]
-}
 
 #Preview {
-    ChatbotView()
+   ChatbotView()
 }
 
