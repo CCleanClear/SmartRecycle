@@ -11,22 +11,24 @@ struct RecycleDetailView: View {
     var recycle : Recycle
     var body: some View {
         ScrollView{
-            VStack (alignment: .leading) {
-                Image(recycle.image).resizable().aspectRatio(contentMode: .fit) .ignoresSafeArea(edges: .top)
-            }
-            HStack{
-                VStack(alignment: .leading) {
-                    Text(recycle.title).font(.title)
-                        .fontWeight(.bold)
-                    Text(recycle.stitle).font(.headline)
-                        .fontWeight(.bold).padding(.bottom)
-                    Text(recycle.desc).foregroundColor(.secondary)
-                }.padding(.vertical, 0.5)
+            VStack{
+                VStack (alignment: .leading) {
+                    Image(recycle.image).resizable().aspectRatio(contentMode: .fit) .ignoresSafeArea(edges: .top)
+                }
+                HStack(spacing: 5){
+                    VStack(alignment: .leading, spacing: 5){
+                            Text(recycle.title).font(.title2)
+                            .fontWeight(.bold)
+                        Text(recycle.stitle).font(.headline).multilineTextAlignment(.leading)
+                            .fontWeight(.bold).padding(.bottom)
+                        Text(recycle.desc).font(.body).multilineTextAlignment(.leading)
+                    }.padding()
+                }
             }.padding()
         }
     }
 }
 
 #Preview {
-    RecycleDetailView(recycle: recycles[1] )
+    RecycleDetailView(recycle: recycles[0] )
 }
