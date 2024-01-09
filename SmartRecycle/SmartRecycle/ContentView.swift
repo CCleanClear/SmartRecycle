@@ -11,20 +11,25 @@ import Combine
 struct ContentView: View {
     var body: some View {
         TabView{
+            RecycleView().tabItem({
+                Image(systemName: "arrow.3.trianglepath")
+                Text("Recycle")
+            }).tag(0)
+            
             NotesView().tabItem({
                 Image(systemName: "square.and.pencil")
                 Text("Notes")
-            }).tag(0)
+            }).tag(1)
             
             MapView().tabItem({
                 Image(systemName: "map")
                 Text("Map")
-            }).tag(1)
+            }).tag(2)
             
             ChatbotView().tabItem({
                 Image(systemName: "info.bubble.fill")
                 Text("Info")
-            }).tag(2)
+            }).tag(3)
         }
     }
 }
