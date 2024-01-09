@@ -21,6 +21,8 @@
 		996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */; };
 		996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */; };
 		996B2DC82B4C0BE200C7570A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 996B2DC72B4C0BE200C7570A /* Alamofire */; };
+		996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC92B4D1AD000C7570A /* CardView.swift */; };
+		996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DCB2B4D1AEC00C7570A /* Recycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		996B2DC02B4BC8DD00C7570A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISerivce.swift; sourceTree = "<group>"; };
+		996B2DC92B4D1AD000C7570A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		996B2DCB2B4D1AEC00C7570A /* Recycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recycle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
 				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
 				996B2DBE2B4BC69700C7570A /* Constants.swift */,
+				996B2DC92B4D1AD000C7570A /* CardView.swift */,
+				996B2DCB2B4D1AEC00C7570A /* Recycle.swift */,
 				996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */,
 				996B2D942B4BC5E300C7570A /* Assets.xcassets */,
 				996B2D962B4BC5E300C7570A /* Preview Content */,
@@ -284,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */,
+				996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */,
 				996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */,
 				996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */,
 				996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */,
@@ -291,6 +298,7 @@
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
 				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
+				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
