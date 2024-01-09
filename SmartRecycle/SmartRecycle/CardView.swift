@@ -18,12 +18,11 @@ struct CardView: View {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.bottom)
-            
+                .padding()
             HStack{
-                VStack(alignment: .leading, spacing: 5){
+                VStack(alignment: .leading, spacing: 10){
                     Text(title)
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                     
@@ -34,6 +33,7 @@ struct CardView: View {
                     
                     Text(desc)
                         .foregroundColor(.secondary)
+                        .multilineTextAlignment(.leading)
                         .lineLimit(3)
                 }.padding()
                 Spacer()
