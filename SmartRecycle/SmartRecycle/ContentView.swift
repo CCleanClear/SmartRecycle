@@ -16,25 +16,21 @@ struct ContentView: View {
                 Text("Recycle")
             }).tag(0)
             
-            ToDoListView().tabItem({
-                Image(systemName: "list.clipboard")
-                Text("To Do List")
-            }).tag(2)
             
             NotesView().tabItem({
                 Image(systemName: "square.and.pencil")
                 Text("Notes")
-            }).tag(2)
+            }).tag(1)
             
             MapView().tabItem({
                 Image(systemName: "map")
                 Text("Map")
-            }).tag(3)
+            }).tag(2)
             
             ChatbotView().tabItem({
                 Image(systemName: "info.bubble.fill")
                 Text("Info")
-            }).tag(4)
+            }).tag(3)
         }
     }
 }
