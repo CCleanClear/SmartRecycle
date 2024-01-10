@@ -21,6 +21,12 @@ struct RecycleView: View {
                 }
             }
             .navigationTitle(Text("Recycling"))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing:
+                                    NavigationLink(destination: ToDoListView()) {
+                Image(systemName: "list.clipboard").font(.title2)
+                }
+            )
         }
     }
 }
