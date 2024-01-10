@@ -27,6 +27,13 @@
 		996B2DD02B4D277B00C7570A /* RecycleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */; };
 		996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */; };
 		996B2DD52B4E650900C7570A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD42B4E650900C7570A /* Persistence.swift */; };
+		996B2DD72B4E66C900C7570A /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD62B4E66C900C7570A /* TaskListView.swift */; };
+		996B2DD92B4E68FB00C7570A /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD82B4E68FB00C7570A /* FloatingButton.swift */; };
+		996B2DDB2B4E693600C7570A /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DDA2B4E693600C7570A /* TaskEditView.swift */; };
+		996B2DDD2B4E69CF00C7570A /* DateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DDC2B4E69CF00C7570A /* DateHolder.swift */; };
+		996B2DDF2B4E6A1B00C7570A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DDE2B4E6A1B00C7570A /* TaskCell.swift */; };
+		996B2DE12B4E6A4D00C7570A /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DE02B4E6A4D00C7570A /* CheckBoxView.swift */; };
+		996B2DE32B4E6AB000C7570A /* TaskItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DE22B4E6AB000C7570A /* TaskItemExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +76,13 @@
 		996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleDetailView.swift; sourceTree = "<group>"; };
 		996B2DD22B4E63D400C7570A /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		996B2DD42B4E650900C7570A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		996B2DD62B4E66C900C7570A /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		996B2DD82B4E68FB00C7570A /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		996B2DDA2B4E693600C7570A /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
+		996B2DDC2B4E69CF00C7570A /* DateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHolder.swift; sourceTree = "<group>"; };
+		996B2DDE2B4E6A1B00C7570A /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		996B2DE02B4E6A4D00C7570A /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		996B2DE22B4E6AB000C7570A /* TaskItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +137,13 @@
 				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
 				996B2DD42B4E650900C7570A /* Persistence.swift */,
 				996B2D922B4BC5E100C7570A /* ContentView.swift */,
+				996B2DD62B4E66C900C7570A /* TaskListView.swift */,
+				996B2DDE2B4E6A1B00C7570A /* TaskCell.swift */,
+				996B2DE02B4E6A4D00C7570A /* CheckBoxView.swift */,
+				996B2DE22B4E6AB000C7570A /* TaskItemExtension.swift */,
+				996B2DD82B4E68FB00C7570A /* FloatingButton.swift */,
+				996B2DDA2B4E693600C7570A /* TaskEditView.swift */,
+				996B2DDC2B4E69CF00C7570A /* DateHolder.swift */,
 				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
 				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
 				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
@@ -302,12 +323,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */,
+				996B2DDD2B4E69CF00C7570A /* DateHolder.swift in Sources */,
+				996B2DDF2B4E6A1B00C7570A /* TaskCell.swift in Sources */,
 				996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */,
+				996B2DD72B4E66C900C7570A /* TaskListView.swift in Sources */,
 				996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */,
 				996B2DD52B4E650900C7570A /* Persistence.swift in Sources */,
 				996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */,
 				996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */,
+				996B2DE32B4E6AB000C7570A /* TaskItemExtension.swift in Sources */,
+				996B2DDB2B4E693600C7570A /* TaskEditView.swift in Sources */,
 				996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */,
+				996B2DE12B4E6A4D00C7570A /* CheckBoxView.swift in Sources */,
 				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
 				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
@@ -315,6 +342,7 @@
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
 				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,
 				996B2DD02B4D277B00C7570A /* RecycleDetailView.swift in Sources */,
+				996B2DD92B4E68FB00C7570A /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
