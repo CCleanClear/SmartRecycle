@@ -16,6 +16,11 @@ struct ContentView: View {
                 Text("Recycle")
             }).tag(0)
             
+            ToDoListView().tabItem({
+                Image(systemName: "list.clipboard")
+                Text("To Do List")
+            }).tag(2)
+            
             NotesView().tabItem({
                 Image(systemName: "square.and.pencil")
                 Text("Notes")

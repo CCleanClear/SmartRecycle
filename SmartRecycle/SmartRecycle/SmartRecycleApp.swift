@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SmartRecycleApp: App {
+    let persistentContainer = CoreDataManager.shared.persistentContainer
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
         }
     }
 }

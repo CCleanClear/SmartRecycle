@@ -27,6 +27,8 @@
 		996B2DD02B4D277B00C7570A /* RecycleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */; };
 		996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */; };
 		996B2E342B4E766700C7570A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E332B4E766700C7570A /* CoreDataManager.swift */; };
+		996B2E362B4E772B00C7570A /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E352B4E772B00C7570A /* ToDoListView.swift */; };
+		996B2E732B4E8CDE00C7570A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E722B4E8CDE00C7570A /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleDetailView.swift; sourceTree = "<group>"; };
 		996B2DD22B4E63D400C7570A /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		996B2E332B4E766700C7570A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		996B2E352B4E772B00C7570A /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		996B2E722B4E8CDE00C7570A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
 				996B2D922B4BC5E100C7570A /* ContentView.swift */,
+				996B2E352B4E772B00C7570A /* ToDoListView.swift */,
 				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
 				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
 				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
@@ -133,9 +138,10 @@
 				996B2DCB2B4D1AEC00C7570A /* Recycle.swift */,
 				996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */,
 				996B2E332B4E766700C7570A /* CoreDataManager.swift */,
+				996B2E722B4E8CDE00C7570A /* Persistence.swift */,
 				996B2D942B4BC5E300C7570A /* Assets.xcassets */,
-				996B2D962B4BC5E300C7570A /* Preview Content */,
 				996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */,
+				996B2D962B4BC5E300C7570A /* Preview Content */,
 			);
 			path = SmartRecycle;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */,
+				996B2E732B4E8CDE00C7570A /* Persistence.swift in Sources */,
 				996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */,
 				996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */,
 				996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */,
@@ -310,6 +317,7 @@
 				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
 				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
+				996B2E362B4E772B00C7570A /* ToDoListView.swift in Sources */,
 				996B2DCE2B4D238600C7570A /* RecycleView.swift in Sources */,
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
 				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,

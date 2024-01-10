@@ -19,7 +19,8 @@ struct RecycleView: View {
                     }
                     
                 }
-            }.navigationTitle(Text("Recycling"))
+            }
+            .navigationTitle(Text("Recycling"))
         }
     }
 }
