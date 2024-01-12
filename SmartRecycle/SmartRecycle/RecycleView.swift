@@ -20,16 +20,24 @@ struct RecycleView: View {
                     
                 }
             }
-            .navigationTitle(Text("Recycling"))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing:
-                                    NavigationLink(destination: ToDoListView()) {
-                Image(systemName: "list.clipboard").font(.title2)
+            .navigationBarTitle("Recycling")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarItems(trailing:
+                            HStack {
+                            NavigationLink(destination: PlasticClassificationView() ) {
+                                Image(systemName: "photo")
+                                    .font(.title2)
+                            }
+                                NavigationLink(destination: ToDoListView()) {
+                                    Image(systemName: "list.clipboard")
+                                        .font(.title2)
+                                }
+                                
+                            }
+                        )
+                    }
                 }
-            )
-        }
-    }
-}
+            }
 
 #Preview {
     RecycleView()
