@@ -20,23 +20,26 @@ struct RecycleView: View {
                     
                 }
             }
-            .navigationBarTitle("Recycling")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing:
-                                    HStack () {
-                NavigationLink(destination: PlasticClassificationView() ) {
-                    Image(systemName: "photo")
-                        .font(.title2)
+            .navigationBarItems(leading:
+                            Text("Recycling")
+                                .font(.title)
+                                .foregroundColor(.primary),
+                                             trailing:
+                            HStack {
+                                NavigationLink(destination: PlasticClassificationView()) {
+                                    Image(systemName: "photo")
+                                        .font(.title3)
+                                }
+                                
+                                NavigationLink(destination: ToDoListView()) {
+                                    Image(systemName: "list.clipboard")
+                                        .font(.title3)
+                                }
+                            }
+                        )
+                    }
+                    .navigationBarTitle("", displayMode: .inline)
                 }
-                NavigationLink(destination: ToDoListView()) {
-                    Image(systemName: "list.clipboard")
-                        .font(.title2)
-                }
-                
-            }.padding(.vertical)
-            )
-        }
-    }
 }
 
 #Preview {
