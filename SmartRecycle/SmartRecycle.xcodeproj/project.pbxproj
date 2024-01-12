@@ -28,9 +28,10 @@
 		996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */; };
 		996B2E342B4E766700C7570A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E332B4E766700C7570A /* CoreDataManager.swift */; };
 		996B2E362B4E772B00C7570A /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E352B4E772B00C7570A /* ToDoListView.swift */; };
-		996B2E732B4E8CDE00C7570A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E722B4E8CDE00C7570A /* Persistence.swift */; };
 		996B2E752B51136600C7570A /* PlasticClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E742B51136600C7570A /* PlasticClassifier.mlmodel */; };
 		996B2E772B51159500C7570A /* PlasticClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E762B51159500C7570A /* PlasticClassificationView.swift */; };
+		996B2E812B51180B00C7570A /* ImageClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E802B51180B00C7570A /* ImageClassification.swift */; };
+		996B2E842B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +75,11 @@
 		996B2DD22B4E63D400C7570A /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		996B2E332B4E766700C7570A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		996B2E352B4E772B00C7570A /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
-		996B2E722B4E8CDE00C7570A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		996B2E742B51136600C7570A /* PlasticClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlasticClassifier.mlmodel; sourceTree = "<group>"; };
 		996B2E762B51159500C7570A /* PlasticClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasticClassificationView.swift; sourceTree = "<group>"; };
+		996B2E802B51180B00C7570A /* ImageClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassification.swift; sourceTree = "<group>"; };
+		996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		996B2E852B511BAD00C7570A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,25 +131,16 @@
 		996B2D8F2B4BC5E100C7570A /* SmartRecycle */ = {
 			isa = PBXGroup;
 			children = (
+				996B2E852B511BAD00C7570A /* Info.plist */,
 				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
 				996B2D922B4BC5E100C7570A /* ContentView.swift */,
-				996B2E352B4E772B00C7570A /* ToDoListView.swift */,
-				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
-				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
-				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
-				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
-				996B2DBE2B4BC69700C7570A /* Constants.swift */,
-				996B2DC92B4D1AD000C7570A /* CardView.swift */,
-				996B2DCD2B4D238600C7570A /* RecycleView.swift */,
-				996B2E762B51159500C7570A /* PlasticClassificationView.swift */,
-				996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */,
-				996B2DCB2B4D1AEC00C7570A /* Recycle.swift */,
-				996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */,
-				996B2E332B4E766700C7570A /* CoreDataManager.swift */,
-				996B2E722B4E8CDE00C7570A /* Persistence.swift */,
+				996B2E782B5116FB00C7570A /* Recycle */,
+				996B2E7B2B51173100C7570A /* ToDoList */,
+				996B2E7C2B51175E00C7570A /* Notes */,
+				996B2E7D2B51178C00C7570A /* Chat */,
+				996B2E7E2B51179C00C7570A /* Map */,
+				996B2E7F2B5117A800C7570A /* PlassticClassification */,
 				996B2D942B4BC5E300C7570A /* Assets.xcassets */,
-				996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */,
-				996B2E742B51136600C7570A /* PlasticClassifier.mlmodel */,
 				996B2D962B4BC5E300C7570A /* Preview Content */,
 			);
 			path = SmartRecycle;
@@ -175,6 +169,65 @@
 				996B2DAD2B4BC5E300C7570A /* SmartRecycleUITestsLaunchTests.swift */,
 			);
 			path = SmartRecycleUITests;
+			sourceTree = "<group>";
+		};
+		996B2E782B5116FB00C7570A /* Recycle */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DCB2B4D1AEC00C7570A /* Recycle.swift */,
+				996B2DC92B4D1AD000C7570A /* CardView.swift */,
+				996B2DCD2B4D238600C7570A /* RecycleView.swift */,
+				996B2DCF2B4D277B00C7570A /* RecycleDetailView.swift */,
+			);
+			path = Recycle;
+			sourceTree = "<group>";
+		};
+		996B2E7B2B51173100C7570A /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DD12B4E63D400C7570A /* TodoList.xcdatamodeld */,
+				996B2E352B4E772B00C7570A /* ToDoListView.swift */,
+				996B2E332B4E766700C7570A /* CoreDataManager.swift */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		996B2E7C2B51175E00C7570A /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
+				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
+				996B2DBE2B4BC69700C7570A /* Constants.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		996B2E7D2B51178C00C7570A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
+				996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		996B2E7E2B51179C00C7570A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DC02B4BC8DD00C7570A /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		996B2E7F2B5117A800C7570A /* PlassticClassification */ = {
+			isa = PBXGroup;
+			children = (
+				996B2E762B51159500C7570A /* PlasticClassificationView.swift */,
+				996B2E802B51180B00C7570A /* ImageClassification.swift */,
+				996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				996B2E742B51136600C7570A /* PlasticClassifier.mlmodel */,
+			);
+			path = PlassticClassification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +368,13 @@
 			files = (
 				996B2E752B51136600C7570A /* PlasticClassifier.mlmodel in Sources */,
 				996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */,
-				996B2E732B4E8CDE00C7570A /* Persistence.swift in Sources */,
 				996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */,
 				996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */,
 				996B2DD32B4E63D400C7570A /* TodoList.xcdatamodeld in Sources */,
 				996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */,
 				996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */,
 				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
+				996B2E842B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
 				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
 				996B2E772B51159500C7570A /* PlasticClassificationView.swift in Sources */,
@@ -329,6 +382,7 @@
 				996B2DCE2B4D238600C7570A /* RecycleView.swift in Sources */,
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
 				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,
+				996B2E812B51180B00C7570A /* ImageClassification.swift in Sources */,
 				996B2E342B4E766700C7570A /* CoreDataManager.swift in Sources */,
 				996B2DD02B4D277B00C7570A /* RecycleDetailView.swift in Sources */,
 			);
@@ -494,13 +548,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartRecycle/Preview Content\"";
+				DEVELOPMENT_TEAM = B8FUAJ4CVB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartRecycle/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,13 +581,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmartRecycle/Preview Content\"";
+				DEVELOPMENT_TEAM = B8FUAJ4CVB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartRecycle/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
