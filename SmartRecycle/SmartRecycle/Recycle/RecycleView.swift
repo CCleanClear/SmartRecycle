@@ -22,13 +22,14 @@ struct RecycleView: View {
             }
             .navigationBarItems(leading:
                             Text("Recycling")
-                                .font(.title)
+                .font(.system(.title, design: .rounded)).fontWeight(.bold)
                                 .foregroundColor(.primary),
                                              trailing:
                             HStack {
                                 NavigationLink(destination: PlasticClassificationView()) {
-                                    Image(systemName: "photo")
+                                    Image(systemName: "camera.viewfinder")
                                         .font(.title3)
+                                        .padding(.top, 3)
                                 }
                                 
                                 NavigationLink(destination: ToDoListView()) {
