@@ -69,12 +69,14 @@ struct LoginView: View {
                             .fontWeight(.bold)
                     }
                     .font(.system(size: 14))
+                    .padding(.bottom,3)
                 }
             }
         }
     }
 }
 
+//MARK: - AuthenticationFormProtocol
 extension LoginView: AuthenticationFormProtocol{
     var formIsValid: Bool{
         return !email.isEmpty

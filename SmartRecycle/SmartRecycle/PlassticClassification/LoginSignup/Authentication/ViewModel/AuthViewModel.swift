@@ -69,4 +69,3 @@ class AuthViewModel: ObservableObject{
         self.currentUser = try? snapshot.data(as: User.self)
     }
 }
-

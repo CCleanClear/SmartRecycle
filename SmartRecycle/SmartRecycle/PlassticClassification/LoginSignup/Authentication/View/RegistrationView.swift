@@ -19,7 +19,7 @@ struct RegistrationView: View {
     var body: some View {
         VStack{
             // image
-            Image("logo1")
+            Image("1024")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 120, height: 120)
@@ -79,9 +79,9 @@ struct RegistrationView: View {
                 .frame(width: UIScreen.main.bounds.width - 32, height: 48)
             }
             .background(Color(.systemBlue))
-            .disabled(formIsValid)
-            .opacity(formIsValid ? 1.0 : 0.5)
             .cornerRadius(10)
+            .disabled(!formIsValid)
+            .opacity(formIsValid ? 1.0 : 0.5)
             .padding(.top,24)
             
             Spacer()
@@ -95,6 +95,7 @@ struct RegistrationView: View {
                         .fontWeight(.bold)
                 }
                 .font(.system(size: 14))
+                .padding(.bottom,3)
             }
         }
     }

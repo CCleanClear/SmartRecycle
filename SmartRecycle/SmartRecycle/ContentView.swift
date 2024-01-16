@@ -10,9 +10,17 @@ import Combine
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
+//        Group{
+//            if viewModel.userSession != nil{
+//                ProfileView()
+//            }else{
+//                LoginView()
+//            }
+//        }
         Group{
-            if viewModel.userSession != nil {
+            if $viewModel.userSession != nil {
                 TabView{
                     RecycleView().tabItem({
                         Image(systemName: "arrow.3.trianglepath")
@@ -38,7 +46,7 @@ struct ContentView: View {
                     ProfileView().tabItem({
                         Image(systemName: "gearshape")
                         Text("Info")
-                    }).tag(3)
+                    }).tag(4)
                 }
                
             } else {

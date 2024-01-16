@@ -10,15 +10,17 @@ import Firebase
 
 @main
 struct SmartRecycleApp: App {
-    //let persistentContainer = CoreDataManager.shared.persistentContainer
+    @StateObject var viewModel = AuthViewModel()
+    let persistenceController = PersistenceController.shared
+    
     init(){
         FirebaseApp.configure()
     }
-    @StateObject var viewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(viewModel)
-                //.environment(\.managedObjectContext, persistentContainer.viewContext)
+            ContentView().environmentObject(viewModel).environment(\.managedObjectContext, persistenceController.container.viewContext)
+                
         }
     }
 }
