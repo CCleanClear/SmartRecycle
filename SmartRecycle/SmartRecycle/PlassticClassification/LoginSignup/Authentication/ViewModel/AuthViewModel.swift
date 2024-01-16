@@ -9,12 +9,16 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+protocol AuthenticationFormProtocol{
+    var formIsValid: Bool{get}
+}
+
 @MainActor
-class AuthViewModel: ObservableObject {
+class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
-    init() {
+    init(){
         self.userSession = Auth.auth().currentUser
         
         Task{
@@ -22,7 +26,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func signIn(withEmail email: String, password: String) async throws {
+    func signIn(withEmail email: String, password: String) async throws{
         do{
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
@@ -32,11 +36,11 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func createUser(WithEmail email: String, password: String, fullname: String) async throws {
+    func createUser(withEmail email: String, password: String, fullName: String) async throws{
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            let user = User(id: result.user.uid, fullname: fullname, email: email)
+            let user = User(id: result.user.uid, fullname: fullName, email: email)
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
@@ -65,3 +69,4 @@ class AuthViewModel: ObservableObject {
         self.currentUser = try? snapshot.data(as: User.self)
     }
 }
+

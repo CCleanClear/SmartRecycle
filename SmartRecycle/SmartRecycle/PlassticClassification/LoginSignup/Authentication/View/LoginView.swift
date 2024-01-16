@@ -11,51 +11,59 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @EnvironmentObject var viewModel: AuthViewModel
-    //@Environment(\.managedObjectContext) private var context
     
     var body: some View {
         NavigationStack{
             VStack{
-                Image("1024").resizable().scaledToFill()
-                    .frame(width: 100,height: 200)
-                    .padding(.vertical, 32)
+                // image
+                Image("1024")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .padding(.vertical,32)
                 
-                VStack(spacing: 24) {
-                    InputView(text: $email, title: "Email Adress", placeholder: "name@example.com")
-                        .autocapitalization(.none)
+                // text Fields
+                VStack(spacing:24){
+                    InputView(text: $email,
+                              title: "Email Address",
+                              placeholder: "name@example.com")
+                    .autocapitalization(.none)
                     
-                    InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecuredField: true)
+                    InputView(text: $password,
+                              title: "Password",
+                              placeholder: "Enter your password",isSecuredField: true)
+                    
                 }
                 .padding(.horizontal)
                 .padding(.top,12)
                 
                 //sign in button
-
-                Button {
-                    Task {
-                        try await viewModel.signIn(withEmail: email, password: password)
+                Button{
+                    Task{
+                        try await viewModel.signIn(withEmail:email,password:password)
                     }
-                } label: {
+                }label: {
                     HStack{
                         Text("SIGN IN")
                             .fontWeight(.semibold)
-                        Image(systemName: "arrow.right")
                     }
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                 }
                 .background(Color(.systemBlue))
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
                 .cornerRadius(10)
                 .padding(.top,24)
                 
                 Spacer()
+                //sign up
                 
-                // sign up button
-                NavigationLink{
+                NavigationLink {
                     RegistrationView()
                         .navigationBarBackButtonHidden(true)
                 } label: {
-                    HStack (spacing: 3){
+                    HStack(spacing:3){
                         Text("Don't have an account?")
                         Text("Sign up")
                             .fontWeight(.bold)
@@ -64,6 +72,15 @@ struct LoginView: View {
                 }
             }
         }
+    }
+}
+
+extension LoginView: AuthenticationFormProtocol{
+    var formIsValid: Bool{
+        return !email.isEmpty
+        && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
     }
 }
 

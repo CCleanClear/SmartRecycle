@@ -66,9 +66,9 @@ struct RegistrationView: View {
             //sign in button
             Button{
                 Task{
-                    try await viewModel.createUser(WithEmail:email,
+                    try await viewModel.createUser(withEmail:email,
                                                    password:password,
-                                                   fullname:fullName)
+                                                   fullName:fullName)
                 }
             }label: {
                 HStack{
@@ -79,6 +79,8 @@ struct RegistrationView: View {
                 .frame(width: UIScreen.main.bounds.width - 32, height: 48)
             }
             .background(Color(.systemBlue))
+            .disabled(formIsValid)
+            .opacity(formIsValid ? 1.0 : 0.5)
             .cornerRadius(10)
             .padding(.top,24)
             
@@ -95,6 +97,17 @@ struct RegistrationView: View {
                 .font(.system(size: 14))
             }
         }
+    }
+}
+
+extension RegistrationView: AuthenticationFormProtocol{
+    var formIsValid: Bool{
+        return !email.isEmpty
+        && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
+        && confirmPassword == password
+        && !fullName.isEmpty
     }
 }
 
