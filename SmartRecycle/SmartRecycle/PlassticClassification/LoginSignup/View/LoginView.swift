@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import PhotosUI
+import Firebase
 
 struct LoginView: View {
     @State var emailID: String = ""
     @State var password: String = ""
     @State var createAccount: Bool = false
+    @State var showError: Bool = false
         var body: some View {
             VStack(spacing: 10){
                 Text("Lets Sign you in")
@@ -79,7 +82,11 @@ struct RegisterView: View {
     @State var password: String = ""
     @State var userName: String = ""
     @State var userBio: String = ""
+    @State var userBioLink: String = ""
+    @State var userProfilePicData: Data?
     @Environment(\.dismiss) var dismiss
+    @State var showImagePicker: Bool = false
+    @State var photoItem: PhotosPickerItem?
     
     var body: some View{
         VStack(spacing: 10){
@@ -90,6 +97,13 @@ struct RegisterView: View {
             Text("Hello user, have a wonderful journey")
                 .font(.title3)
                 .hAlign(.leading)
+            
+            ViewThatFits {
+                ScrollView(.vertical, showsIndicators: false) {
+                    HelperView()
+                }
+                HelperView()
+            }
             
             VStack (spacing: 12){
                 TextField("Username", text: $userName)
@@ -102,6 +116,15 @@ struct RegisterView: View {
                     .border(1, .gray.opacity(0.5))
                 
                 TextField("Password", text: $password)
+                    .textContentType(.emailAddress)
+                    .border(1, .gray.opacity(0.5))
+                
+                TextField("About you", text: $userBio, axis: .vertical)
+                    .frame(minHeight: 100, alignment:.top)
+                    .textContentType(.emailAddress)
+                    .border(1, .gray.opacity(0.5))
+                
+                TextField("Bio LInk (Optional)", text: $userBioLink)
                     .textContentType(.emailAddress)
                     .border(1, .gray.opacity(0.5))
                 
@@ -133,6 +156,83 @@ struct RegisterView: View {
         }
         .vAlign(.top)
         .padding(15)
+        .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
+        .onChange(of: photoItem) {newValue in
+            if let newValue{
+                Task{
+                    do{
+                        guard let imageData  = try await newValue.loadTransferable(type: Data.self) else {
+                            return
+                        }
+                        await MainActor.run(body: {
+                            userProfilePicData = imageData
+                        })
+                        
+                    } catch {}
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func HelperView() -> some View {
+        VStack (spacing: 12){
+            
+            ZStack{
+                if let userProfilePicData, let image = UIImage(data: userProfilePicData){
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    Image("NULLProfile")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+            }
+            .frame(width: 85, height: 85)
+            .clipShape(Circle())
+            .contentShape(Circle())
+            .onTapGesture {
+                showImagePicker.toggle()
+            }
+            .padding(.top,25)
+            
+            TextField("Username", text: $userName)
+                .textContentType(.emailAddress)
+                .border(1, .gray.opacity(0.5))
+                .padding(.top,25)
+            
+            TextField("Email", text: $emailID)
+                .textContentType(.emailAddress)
+                .border(1, .gray.opacity(0.5))
+            
+            TextField("Password", text: $password)
+                .textContentType(.emailAddress)
+                .border(1, .gray.opacity(0.5))
+            
+            TextField("About you", text: $userBio, axis: .vertical)
+                .frame(minHeight: 100, alignment:.top)
+                .textContentType(.emailAddress)
+                .border(1, .gray.opacity(0.5))
+            
+            TextField("Bio LInk (Optional)", text: $userBioLink)
+                .textContentType(.emailAddress)
+                .border(1, .gray.opacity(0.5))
+            
+            
+            Button{
+                
+                
+                
+            } label: {
+                Text("Sign up")
+                    .foregroundColor(.white)
+                    .hAlign(.center)
+                    .fillView(.black)
+            }
+            .padding(.top,10)
+            
+        }
     }
 }
 

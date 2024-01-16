@@ -32,10 +32,10 @@ struct RecycleView: View {
                                         .padding(.top, 3)
                                 }
                                 
-                                NavigationLink(destination: ToDoListView()) {
-                                    Image(systemName: "list.clipboard")
-                                        .font(.title3)
-                                }
+//                                NavigationLink(destination: ToDoListView()) {
+//                                    Image(systemName: "list.clipboard")
+//                                        .font(.title3)
+//                                }
                             }
                         )
                     }

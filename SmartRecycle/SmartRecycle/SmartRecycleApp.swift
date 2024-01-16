@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct SmartRecycleApp: App {
-    let persistentContainer = CoreDataManager.shared.persistentContainer
+    //let persistentContainer = CoreDataManager.shared.persistentContainer
+    init(){
+        FirebaseApp.configure()
+    }
+    @StateObject var viewModel = AuthViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView().environment(\.managedObjectContext, persistentContainer.viewContext)
+            ContentView().environmentObject(viewModel)
+                //.environment(\.managedObjectContext, persistentContainer.viewContext)
         }
     }
 }
