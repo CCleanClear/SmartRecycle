@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class AuthoViewModel: ObservableObject {
+class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
@@ -21,7 +21,7 @@ class AuthoViewModel: ObservableObject {
     }
     
     func createUser(WithEmail email: String, password: String, fullname: String) async throws {
-        
+        print("Create user")
     }
     
     func signOut(){
