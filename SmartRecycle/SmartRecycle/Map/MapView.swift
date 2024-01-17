@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import CoreLocationUI
 
 struct Place: Identifiable {
     let id = UUID()
@@ -16,8 +17,6 @@ struct Place: Identifiable {
 
 
 struct MapView: View {
-    
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.3700556 , longitude: 114.1535941), latitudinalMeters: 3000, longitudinalMeters: 3000)
     
     let annotations = [
         Place(name: "Green in Aberdeen", coordinate: CLLocationCoordinate2D(latitude: 22.24941606003023 , longitude: 114.15454382325527)),
@@ -60,27 +59,69 @@ struct MapView: View {
         return "Green@Recycling Stores"
     }
     
+    @StateObject private var viewModel = MapViewModel()
+    
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: annotations) { place in
-            MapAnnotation(coordinate: place.coordinate) {
-                HStack {
-                    Image(systemName: "arrow.3.trianglepath")
-                        .foregroundColor(.green)
-                    Text(rating)
-                        .fixedSize()
-                }.padding(10)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
-                    .overlay(
-                        Image(systemName: "arrowtriangle.left.fill")
-                            .rotationEffect(Angle(degrees: 270))
-                            .foregroundColor(.white)
-                            .offset(y: 10)
-                        
-                        , alignment: .bottom)
-                
+        ZStack (alignment: .bottom){
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
+                MapAnnotation(coordinate: place.coordinate) {
+                    HStack {
+                        Image(systemName: "arrow.3.trianglepath")
+                            .foregroundColor(.green)
+                        Text(rating)
+                            .fixedSize()
+                    }.padding(10)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                        .overlay(
+                            Image(systemName: "arrowtriangle.left.fill")
+                                .rotationEffect(Angle(degrees: 270))
+                                .foregroundColor(.white)
+                                .offset(y: 10)
+                            
+                            , alignment: .bottom)
+                }
+
+            }//.ignoresSafeArea()
+            
+            LocationButton(.currentLocation){
+                viewModel.requestAllowOnceLocationPermission()
             }
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            .labelStyle(.titleAndIcon)
+            .symbolVariant(.fill)
+            .padding(.bottom, 50)
+            
         }
+    }
+}
+
+final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.3700556 , longitude: 114.1535941), latitudinalMeters: 3000, longitudinalMeters: 3000)
+    
+    let locationManger = CLLocationManager()
+    
+    override init() {
+        super.init()
+        locationManger.delegate = self
+    }
+    
+    func requestAllowOnceLocationPermission(){
+        locationManger.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let latestLocation = locations.first else{
+            return
+        }
+        DispatchQueue.main.async {
+            self.region = MKCoordinateRegion(center: latestLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
 

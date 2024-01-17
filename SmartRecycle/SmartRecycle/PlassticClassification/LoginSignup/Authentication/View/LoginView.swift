@@ -13,6 +13,10 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Smart Recycle")
+                .font(.title.bold())
+        }
         NavigationStack{
             VStack{
                 // image
@@ -50,7 +54,7 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                 }
-                .background(Color(.systemBlue))
+                .background(Color(red: 1, green: 0.5, blue: 0, opacity: 1))
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5)
                 .cornerRadius(10)
@@ -68,7 +72,7 @@ struct LoginView: View {
                         Text("Sign up")
                             .fontWeight(.bold)
                     }
-                    .font(.system(size: 14))
+                    .font(.system(size: 15))
                     .padding(.bottom,3)
                 }
             }

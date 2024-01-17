@@ -20,7 +20,7 @@ struct ContentView: View {
 //            }
 //        }
         Group{
-            if $viewModel.userSession != nil {
+            if viewModel.userSession != nil {
                 TabView{
                     RecycleView().tabItem({
                         Image(systemName: "arrow.3.trianglepath")
@@ -45,7 +45,7 @@ struct ContentView: View {
                     
                     ProfileView().tabItem({
                         Image(systemName: "gearshape")
-                        Text("Info")
+                        Text("Profile")
                     }).tag(4)
                 }
                
@@ -56,7 +56,6 @@ struct ContentView: View {
         
     }
 }
-
 #Preview {
     ContentView()
 }

@@ -78,7 +78,7 @@ struct RegistrationView: View {
                 .foregroundColor(.white)
                 .frame(width: UIScreen.main.bounds.width - 32, height: 48)
             }
-            .background(Color(.systemBlue))
+            .background(Color(red: 1, green: 0.5, blue: 0, opacity: 1))
             .cornerRadius(10)
             .disabled(!formIsValid)
             .opacity(formIsValid ? 1.0 : 0.5)

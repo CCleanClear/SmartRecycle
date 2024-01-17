@@ -25,7 +25,7 @@ struct EraserButton: View {
                 .padding()
                 .background(Color.black)
                 .clipShape(Circle())
-        }
+        }.animation(.spring())
     }
     
     func eraseAll() {
@@ -76,7 +76,7 @@ struct NotesView: View {
                 EraserButton(lines: $lines)
             }
             .padding()
-        }
+        } 
         //test
     }
 }
