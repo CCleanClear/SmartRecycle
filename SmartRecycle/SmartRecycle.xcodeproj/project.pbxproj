@@ -224,13 +224,14 @@
 				996B2E852B511BAD00C7570A /* Info.plist */,
 				996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */,
 				996B2D922B4BC5E100C7570A /* ContentView.swift */,
+				996B2DBE2B4BC69700C7570A /* Constants.swift */,
 				996B2E782B5116FB00C7570A /* Recycle */,
 				996B2E7B2B51173100C7570A /* DoListOrder */,
+				996B2E7F2B5117A800C7570A /* PlassticClassification */,
 				996B2E7C2B51175E00C7570A /* Notes */,
 				996B2E7D2B51178C00C7570A /* Chat */,
 				996B2E7E2B51179C00C7570A /* Map */,
 				99223D902B54F585003D7D42 /* LoginSignup */,
-				996B2E7F2B5117A800C7570A /* PlassticClassification */,
 				996B2D942B4BC5E300C7570A /* Assets.xcassets */,
 				99223DA12B5508B0003D7D42 /* GoogleService-Info.plist */,
 				996B2D962B4BC5E300C7570A /* Preview Content */,
@@ -290,7 +291,6 @@
 			children = (
 				996B2DBA2B4BC60100C7570A /* NotesView.swift */,
 				996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */,
-				996B2DBE2B4BC69700C7570A /* Constants.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";

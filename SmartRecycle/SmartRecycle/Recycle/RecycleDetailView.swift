@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecycleDetailView: View {
     var recycle : Recycle
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ScrollView{
             VStack{

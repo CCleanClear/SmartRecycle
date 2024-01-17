@@ -16,6 +16,11 @@ struct PlasticClassificationView: View {
     @ObservedObject var classification = ImageClassification()
     
     var body: some View {
+        VStack (alignment: .leading, spacing: 10){
+            Text("Plastic Type Classification")
+                .font(.title).bold()
+                .padding(.horizontal, 5)
+        }.frame(maxWidth: .infinity, alignment: .leading)
         ZStack(alignment: .bottom) {
             // display the image
             if let image = self.image {
@@ -23,14 +28,14 @@ struct PlasticClassificationView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .edgesIgnoringSafeArea(.all)
+                    //.edgesIgnoringSafeArea(.all)
             }
             else {
                 Image(uiImage: UIImage())
                     .resizable()
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .edgesIgnoringSafeArea(.all)
+                    //.edgesIgnoringSafeArea(.all)
             }
             
             VStack {
@@ -39,8 +44,8 @@ struct PlasticClassificationView: View {
                     .padding(20)
                     .foregroundColor(.black)
                     .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.secondary)
+                        RoundedRectangle(cornerRadius: 10).stroke(Color(.black),lineWidth: 2)
+                            .background(Color.white).cornerRadius(9)
                         )
             
                 // select camera or photo library
@@ -59,11 +64,11 @@ struct PlasticClassificationView: View {
                         Text("Choose Photo")
                     })
                 } label: {
-                    Image(systemName: "camera")
+                    Image(systemName: "camera.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .padding(5)
+                        .padding(20)
                 }
                 .sheet(isPresented: $isPresented, onDismiss: {
                     // Classify the image

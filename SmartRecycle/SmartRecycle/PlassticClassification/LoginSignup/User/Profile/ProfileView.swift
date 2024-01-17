@@ -20,7 +20,7 @@ struct ProfileView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .frame(width: 72, height: 72)
-                            .background(Color(.systemGray3))
+                            .background(Color(.brown))
                             .clipShape(Circle())
                         
                         VStack(alignment: .leading,spacing: 4){
@@ -50,7 +50,7 @@ struct ProfileView: View {
                     Button{
                         viewModel.signOut()
                     }label: {
-                        SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign out", tintColor: .red)
+                        SettingsRowView(imageName: "rectangle.portrait.and.arrow.right", title: "Sign out", tintColor: .red)
                     }
                     
                     Button{

@@ -30,10 +30,10 @@ struct ChatbotView: View {
                     .cornerRadius(12)
                 Button{
                     sendMessage()
-                } label: {Text("Send")
+                } label: {Image(systemName: "paperplane")
                         .foregroundColor(.white)
                         .padding()
-                        .background(.black)
+                        .background(.accent)
                         .cornerRadius(12)
                 }
             }
@@ -47,8 +47,8 @@ struct ChatbotView: View {
             Text(message.content)
                 .foregroundColor(message.sender == .me ? .white : .black)
                 .padding()
-                .background(message.sender == .me ? .blue : .gray.opacity(0.1))
-                .cornerRadius(16)
+                .background(message.sender == .me ? .orange : .white.opacity(0.1))
+                .cornerRadius(12)
             if message.sender == .gpt {
                 Spacer()
             }

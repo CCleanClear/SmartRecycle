@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constant {
-    static let openAPIKey = "APIKey"
+    static let openAPIKey = "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"
 }
 
 struct Constants {

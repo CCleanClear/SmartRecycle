@@ -23,8 +23,8 @@ struct ListView: View {
             List {
                 ForEach(items) { item in
                     HStack{
+                        Text("\(item.order). ")
                         Text(item.title ?? "")
-                        Text("\(item.order)")
                     }
                 }
                 .onMove(perform: moveItem)
@@ -44,7 +44,7 @@ struct ListView: View {
                     Button(action: {
                         addItemView.toggle()
                     }) {
-                        Label("Add Item", systemImage: "plus")
+                        Label("Add Item", systemImage: "plus.rectangle")
                     }
                 }
             }

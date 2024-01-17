@@ -39,8 +39,9 @@ struct CardView: View {
                 Spacer()
             }
         }.cornerRadius(10)
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.gray),lineWidth: 1).shadow(color: .gray, radius: 5, x: 5, y: 8))
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.gray),lineWidth: 1))//.shadow(color: .black, radius: 8, x: 15, y: 7))
         .padding()
+        .shadow(color: Color.gray.opacity(0.3), radius: 5, x: 5, y: 10)
     }
 }
 

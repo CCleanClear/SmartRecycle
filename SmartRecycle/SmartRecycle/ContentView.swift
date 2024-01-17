@@ -20,7 +20,7 @@ struct ContentView: View {
 //            }
 //        }
         Group{
-            if viewModel.userSession != nil {
+            if $viewModel.userSession != nil {
                 TabView{
                     RecycleView().tabItem({
                         Image(systemName: "arrow.3.trianglepath")

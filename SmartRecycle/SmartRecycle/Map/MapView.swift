@@ -91,6 +91,7 @@ struct MapView: View {
             .cornerRadius(8)
             .labelStyle(.titleAndIcon)
             .symbolVariant(.fill)
+            .tint(.teal)
             .padding(.bottom, 50)
             
         }
@@ -98,7 +99,7 @@ struct MapView: View {
 }
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.3700556 , longitude: 114.1535941), latitudinalMeters: 3000, longitudinalMeters: 3000)
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.316668 , longitude: 114.183334), latitudinalMeters: 6000, longitudinalMeters: 6000)
     
     let locationManger = CLLocationManager()
     
