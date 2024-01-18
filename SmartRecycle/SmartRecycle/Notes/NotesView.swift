@@ -25,7 +25,7 @@ struct EraserButton: View {
                 .padding()
                 .background(Color.accentColor)
                 .clipShape(Circle())
-        }.animation(.spring())
+        }
     }
     
     func eraseAll() {
@@ -39,49 +39,99 @@ struct NotesView: View {
     @State private var selectedColor: Color = .red
     @State private var thickness: Double = 1.0
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
-//        ZStack(alignment: .topLeading){
-//                Text("Take Notes").font(.title2)
-//            }.frame(width: .infinity)
-//            .padding(.top, 10)
-            VStack {
-                Canvas { context, size in
-                    for line in lines {
-                        var path = Path()
-                        path.addLines(line.points)
-                        context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
-                    }
+        
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View {
+        VStack {
+            Canvas { context, size in
+                for line in lines {
+                    var path = Path()
+                    path.addLines(line.points)
+                    context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
                 }
-                .frame(minWidth: 400, minHeight: 400)
-                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                    .onChanged({ value in
-                        let newPoint = value.location
-                        currentLine.points.append(newPoint)
-                        self.lines.append(currentLine)
-                    })
-                        .onEnded({ value in
-                            self.lines.append(currentLine)
-                            self.currentLine = Line(points: [], color: currentLine.color, lineWidth: thickness)
-                        })
-                )
-                
-                HStack {
-                    Slider(value: $thickness, in: 1...20) {
-                        Text("Thickness")
-                    }
-                    .frame(maxWidth: 200)
-                    .onChange(of: thickness) { newThickness in
-                        currentLine.lineWidth = newThickness
-                    }
-                    ColorPickerView(selectedColor: $currentLine.color)
-                        .onChange(of: currentLine.color) { newColor in
-                            currentLine.color = newColor
-                        }
-                    EraserButton(lines: $lines)
-                }
-                .padding()
             }
-            //test
+            .frame(minWidth: 400, minHeight: 400)
+            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                .onChanged({ value in
+                    let newPoint = value.location
+                    currentLine.points.append(newPoint)
+                    self.lines.append(currentLine)
+                })
+                    .onEnded({ value in
+                        self.lines.append(currentLine)
+                        self.currentLine = Line(points: [], color: currentLine.color, lineWidth: thickness)
+                    })
+            )
+            
+            HStack {
+                Slider(value: $thickness, in: 1...20) {
+                    Text("Thickness")
+                }
+                .frame(maxWidth: 200)
+                .onChange(of: thickness) { newThickness in
+                    currentLine.lineWidth = newThickness
+                }
+                ColorPickerView(selectedColor: $currentLine.color)
+                    .onChange(of: currentLine.color) { newColor in
+                        currentLine.color = newColor
+                    }
+                EraserButton(lines: $lines)
+            }
+            .padding()
+        }
+    }
+    
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
+        VStack {
+            Canvas { context, size in
+                for line in lines {
+                    var path = Path()
+                    path.addLines(line.points)
+                    context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
+                }
+            }
+            .frame(minWidth: 400, minHeight: 400)
+            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                .onChanged({ value in
+                    let newPoint = value.location
+                    currentLine.points.append(newPoint)
+                    self.lines.append(currentLine)
+                })
+                    .onEnded({ value in
+                        self.lines.append(currentLine)
+                        self.currentLine = Line(points: [], color: currentLine.color, lineWidth: thickness)
+                    })
+            )
+            
+            HStack {
+                Slider(value: $thickness, in: 1...20) {
+                    Text("Thickness")
+                }
+                .frame(maxWidth: 200)
+                .onChange(of: thickness) { newThickness in
+                    currentLine.lineWidth = newThickness
+                }
+                ColorPickerView(selectedColor: $currentLine.color)
+                    .onChange(of: currentLine.color) { newColor in
+                        currentLine.color = newColor
+                    }
+                EraserButton(lines: $lines)
+            }
+            .padding()
+        }
     }
 }
 #Preview {

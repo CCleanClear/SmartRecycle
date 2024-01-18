@@ -17,8 +17,55 @@ struct ListView: View {
     private var items: FetchedResults<Item>
     
     @State private var addItemView = false
+    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     var body: some View {
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View {
+        NavigationView {
+                List {
+                    ForEach(items) { item in
+                        HStack{
+                            Text("\(item.order). ")
+                            Text(item.title ?? "")
+                        }
+                    }
+                    .onMove(perform: moveItem)
+                    .onDelete(perform: deleteItem)
+                }
+                .navigationTitle("Order List")
+                .sheet(isPresented: $addItemView){
+                    AddItemView()
+                }
+                .toolbar {
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
+                    
+                    ToolbarItem {
+                        Button(action: {
+                            addItemView.toggle()
+                        }) {
+                            Label("Add Item", systemImage: "plus.rectangle")
+                        }
+                    }
+                }
+        }
+    }
+    
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
@@ -98,6 +145,7 @@ struct ListView: View {
             }
         }
     }
+    
 }
 
 #Preview {
