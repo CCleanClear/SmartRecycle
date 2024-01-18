@@ -31,7 +31,7 @@ struct ProfileView: View {
                                 Text(user.initials)
                                     .font(.title)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.F)
                                     .frame(width: 72, height: 72)
                                     .background(Color.sec)
                                     .clipShape(Circle())

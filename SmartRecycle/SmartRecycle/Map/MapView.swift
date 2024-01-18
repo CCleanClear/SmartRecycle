@@ -61,7 +61,19 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View {
         ZStack (alignment: .bottom){
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
                 MapAnnotation(coordinate: place.coordinate) {
@@ -82,7 +94,45 @@ struct MapView: View {
                             , alignment: .bottom)
                 }
 
-            }//.ignoresSafeArea()
+            }.edgesIgnoringSafeArea(.horizontal)
+            
+            LocationButton(.currentLocation){
+                viewModel.requestAllowOnceLocationPermission()
+            }
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            .labelStyle(.titleAndIcon)
+            .symbolVariant(.fill)
+            .tint(.thr)
+            .padding(.bottom, 25)
+            
+        }
+    }
+    
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
+        ZStack (alignment: .bottom){
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
+                MapAnnotation(coordinate: place.coordinate) {
+                    HStack {
+                        Image(systemName: "arrow.3.trianglepath")
+                            .foregroundColor(.green)
+                        Text(rating)
+                            .fixedSize()
+                    }.padding(10)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+                        .overlay(
+                            Image(systemName: "arrowtriangle.left.fill")
+                                .rotationEffect(Angle(degrees: 270))
+                                .foregroundColor(.white)
+                                .offset(y: 10)
+                            
+                            , alignment: .bottom)
+                }
+
+            }.edgesIgnoringSafeArea(.top)
             
             LocationButton(.currentLocation){
                 viewModel.requestAllowOnceLocationPermission()

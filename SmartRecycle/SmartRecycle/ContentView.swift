@@ -44,7 +44,7 @@ struct ContentView: View {
                     }).tag(3)
                     
                     ProfileView().tabItem({
-                        Image(systemName: "gearshape")
+                        Image(systemName: "person")
                         Text("Profile")
                     }).tag(4)
                 }

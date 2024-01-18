@@ -119,7 +119,7 @@ struct RecycleView: View {
                 }
                 
                 NavigationLink(destination: ListView()) {
-                    Image(systemName: "list.clipboard")
+                    Image(systemName: "pencil.and.list.clipboard")
                         .font(.title3)
                 }
             }

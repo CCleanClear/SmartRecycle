@@ -13,7 +13,60 @@ struct ChatbotView: View {
     @State var messageText:String = ""
     let openAIService = OpenAISerivce()
     @State var cancellables = Set<AnyCancellable>()
+    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    
     var body: some View {
+        
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            verticalLayout
+        } else {
+            horizontalLayout
+        }
+    }
+    
+    @ViewBuilder
+    private var horizontalLayout: some View {
+            VStack {
+                Text("ChatGPT")
+                    .font(.system(.title, design: .rounded)).fontWeight(.bold)
+                    .fontWeight(.bold)
+                    .padding(.top)
+                
+                Divider()
+                    .background(Color.black)
+                    .frame(height: 2)
+
+            ScrollView{
+                LazyVStack{
+                    ForEach(chatMeaasge, id: \.id) { message in
+                        messageView(message: message)
+                    }
+                }
+                .padding()
+            }
+                HStack {
+                TextField("Enter a message", text: $messageText)
+                    .padding()
+                    .background(.white)
+                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(.gray),lineWidth: 0.5))
+                Button{
+                    sendMessage()
+                } label: {Image(systemName: "paperplane")
+                        .foregroundColor(.black)
+                        .padding()
+                        .background(Color("Sec_Color"))
+                        .cornerRadius(60)
+                }.padding(.leading, 20)
+            }
+            .padding(.vertical, 5)
+        }
+    }
+    
+    @ViewBuilder
+    private var verticalLayout: some View {
         VStack {
                 Text("ChatGPT")
                 .font(.system(.title, design: .rounded)).fontWeight(.bold)
@@ -49,6 +102,7 @@ struct ChatbotView: View {
                 .padding()
             }
     }
+    
     func messageView(message: ChatMessage) -> some View {
         HStack{
             if message.sender == .me {Spacer()}

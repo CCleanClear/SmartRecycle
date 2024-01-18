@@ -49,10 +49,12 @@ struct NotesView: View {
         } else {
             horizontalLayout
         }
+        
     }
     
     @ViewBuilder
     private var horizontalLayout: some View {
+        
         VStack {
             Canvas { context, size in
                 for line in lines {
@@ -61,7 +63,7 @@ struct NotesView: View {
                     context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
                 }
             }
-            .frame(minWidth: 400, minHeight: 400)
+            .frame(minWidth: 400, minHeight: 300)
             .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
                 .onChanged({ value in
                     let newPoint = value.location
@@ -74,7 +76,7 @@ struct NotesView: View {
                     })
             )
             
-            HStack {
+            HStack ( spacing: 13) {
                 Slider(value: $thickness, in: 1...20) {
                     Text("Thickness")
                 }
@@ -87,11 +89,10 @@ struct NotesView: View {
                         currentLine.color = newColor
                     }
                 EraserButton(lines: $lines)
+                    .padding(.bottom, 10)
             }
-            .padding()
         }
     }
-    
     
     @ViewBuilder
     private var verticalLayout: some View {
