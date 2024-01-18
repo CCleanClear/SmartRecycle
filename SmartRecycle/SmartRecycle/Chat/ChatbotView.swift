@@ -15,30 +15,39 @@ struct ChatbotView: View {
     @State var cancellables = Set<AnyCancellable>()
     var body: some View {
         VStack {
-        ScrollView{
-            LazyVStack{
-                ForEach(chatMeaasge, id: \.id) { message in
-                    messageView(message: message)
-                }
-            }
-            .padding()
-        }
-            HStack{
-                TextField("Enter a message", text: $messageText)
+                Text("ChatGPT")
+                .font(.system(.title, design: .rounded)).fontWeight(.bold)
+                    .fontWeight(.bold)
+                    .padding(.top)
+                
+                Divider()
+                    .background(Color.black)
+                    .frame(height: 2)
+            
+                ScrollView{
+                    LazyVStack{
+                        ForEach(chatMeaasge, id: \.id) { message in
+                            messageView(message: message)
+                        }
+                    }
                     .padding()
-                    .background(.gray.opacity(0.1))
-                    .cornerRadius(12)
-                Button{
-                    sendMessage()
-                } label: {Image(systemName: "paperplane")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(.accent)
-                        .cornerRadius(12)
                 }
+                HStack{
+                    TextField("Enter a message", text: $messageText)
+                        .padding()
+                        .background(.gray.opacity(0.1))
+                        .cornerRadius(12)
+                    Button{
+                        sendMessage()
+                    } label: {Image(systemName: "paperplane")
+                            .foregroundColor(.black)
+                            .padding()
+                            .background(Color("Sec_Color"))
+                            .cornerRadius(12)
+                    }
+                }
+                .padding()
             }
-            .padding()
-        }
     }
     func messageView(message: ChatMessage) -> some View {
         HStack{
@@ -47,7 +56,7 @@ struct ChatbotView: View {
             Text(message.content)
                 .foregroundColor(message.sender == .me ? .white : .black)
                 .padding()
-                .background(message.sender == .me ? .orange : .white.opacity(0.1))
+                .background(message.sender == .me ? .thr : .gray.opacity(0.1))
                 .cornerRadius(12)
             if message.sender == .gpt {
                 Spacer()

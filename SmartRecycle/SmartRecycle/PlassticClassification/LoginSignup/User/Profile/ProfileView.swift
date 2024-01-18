@@ -20,10 +20,10 @@ struct ProfileView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .frame(width: 72, height: 72)
-                            .background(Color(.brown))
+                            .background(Color.sec)
                             .clipShape(Circle())
                         
-                        VStack(alignment: .leading,spacing: 4){
+                        VStack(alignment: .leading,spacing: 5){
                             Text(user.fullname)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)

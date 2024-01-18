@@ -87,11 +87,11 @@ struct MapView: View {
             LocationButton(.currentLocation){
                 viewModel.requestAllowOnceLocationPermission()
             }
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .cornerRadius(8)
             .labelStyle(.titleAndIcon)
             .symbolVariant(.fill)
-            .tint(.teal)
+            .tint(.sec)
             .padding(.bottom, 50)
             
         }
