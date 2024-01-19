@@ -79,13 +79,15 @@ struct RecycleView: View {
                                         HStack {
                     NavigationLink(destination: PlasticClassificationView()) {
                         Image(systemName: "camera.viewfinder")
-                            .font(.title3)
+                            .font(.body)
+                            .foregroundColor(.thr)
                             .padding(10)
                     }
 
                     NavigationLink(destination: ListView()) {
                         Image(systemName: "list.clipboard")
-                            .font(.title3)
+                            .font(.body)
+                            .foregroundColor(.thr)
                     }
                 }
                 )
@@ -114,13 +116,15 @@ struct RecycleView: View {
                                     HStack {
                 NavigationLink(destination: PlasticClassificationView()) {
                     Image(systemName: "camera.viewfinder")
-                        .font(.title3)
-                        .padding(10)
+                        .font(.body)
+                        .padding(.top, 5)
+                        .foregroundColor(.black)
                 }
                 
                 NavigationLink(destination: ListView()) {
                     Image(systemName: "pencil.and.list.clipboard")
-                        .font(.title3)
+                        .font(.body)
+                        .foregroundColor(.black)
                 }
             }
             ).padding(.horizontal, 5)

@@ -15,9 +15,10 @@ struct PlasticClassificationView: View {
     // image classifier
     @ObservedObject var classification = ImageClassification()
     
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
-        @Environment(\.verticalSizeClass) var verticalSizeClass
-        @Environment(\.horizontalSizeClass) var horizontalSizeClass
         
         if horizontalSizeClass == .compact && verticalSizeClass == .regular {
             verticalLayout
@@ -31,11 +32,11 @@ struct PlasticClassificationView: View {
     private var horizontalLayout: some View {
         HStack (alignment:.top, spacing: 10){
             VStack {
-            Text("Plastic Type Classification")
-                .font(.title).bold()
-                .fixedSize(horizontal: true, vertical: false)
+                Text("Plastic Type Classification")
+                    .font(.title).bold()
+                    .fixedSize(horizontal: true, vertical: false)
                 
-        } .padding(.top, 10)
+            } .padding(.top, 10)
             
             VStack{
                 ZStack(alignment: .center) {
@@ -85,6 +86,7 @@ struct PlasticClassificationView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.black)
                                 .padding(10)
                         }
                         .sheet(isPresented: $isPresented, onDismiss: {
@@ -98,8 +100,8 @@ struct PlasticClassificationView: View {
                     }
                 }
             }
-        
         }
+        
     }
     
     @ViewBuilder
@@ -107,8 +109,8 @@ struct PlasticClassificationView: View {
         VStack (alignment: .leading, spacing: 10){
             Text("Plastic Type Classification")
                 .font(.title).bold()
-                .padding(.horizontal, 5)
         }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 10)
         ZStack(alignment: .bottom) {
             // display the image
             if let image = self.image {

@@ -41,6 +41,7 @@
 		996B2E772B51159500C7570A /* PlasticClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E762B51159500C7570A /* PlasticClassificationView.swift */; };
 		996B2E812B51180B00C7570A /* ImageClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E802B51180B00C7570A /* ImageClassification.swift */; };
 		996B2E842B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		99EA392B2B5A9CEA00EE0AAD /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99EA392A2B5A9CEA00EE0AAD /* OpenAISwift */; };
 		99F361242B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99F361222B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld */; };
 		99F361262B56B1B300A8D30B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361252B56B1B300A8D30B /* Persistence.swift */; };
 		99F361282B56B1D900A8D30B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361272B56B1D900A8D30B /* ListView.swift */; };
@@ -113,6 +114,7 @@
 				99223DA52B5509EB003D7D42 /* FirebaseAuth in Frameworks */,
 				99223DA72B5509EB003D7D42 /* FirebaseFirestore in Frameworks */,
 				99223DAB2B5509EB003D7D42 /* FirebaseStorage in Frameworks */,
+				99EA392B2B5A9CEA00EE0AAD /* OpenAISwift in Frameworks */,
 				99223DA92B5509EB003D7D42 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +347,7 @@
 				99223DA62B5509EB003D7D42 /* FirebaseFirestore */,
 				99223DA82B5509EB003D7D42 /* FirebaseFirestoreSwift */,
 				99223DAA2B5509EB003D7D42 /* FirebaseStorage */,
+				99EA392A2B5A9CEA00EE0AAD /* OpenAISwift */,
 			);
 			productName = SmartRecycle;
 			productReference = 996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */;
@@ -421,6 +424,7 @@
 			packageReferences = (
 				996B2DC62B4C0BE200C7570A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				99223DA32B5509EB003D7D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				99EA39292B5A9CEA00EE0AAD /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = 996B2D8E2B4BC5E100C7570A /* Products */;
 			projectDirPath = "";
@@ -843,6 +847,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		99EA39292B5A9CEA00EE0AAD /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -870,6 +882,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 996B2DC62B4C0BE200C7570A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		99EA392A2B5A9CEA00EE0AAD /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99EA39292B5A9CEA00EE0AAD /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -42,7 +42,7 @@ struct ListView: View {
                     .onMove(perform: moveItem)
                     .onDelete(perform: deleteItem)
                 }
-                .navigationTitle("Order List")
+                .navigationTitle("Order List").font(.system(.title, design: .rounded)).fontWeight(.bold)
                 .sheet(isPresented: $addItemView){
                     AddItemView()
                 }
@@ -77,7 +77,7 @@ struct ListView: View {
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
-            .navigationTitle("Order List")
+            .navigationTitle("Order List").font(.system(.title, design: .rounded)).fontWeight(.bold)
             .sheet(isPresented: $addItemView){
                 AddItemView()
             }
@@ -94,11 +94,11 @@ struct ListView: View {
                         Label("Add Item", systemImage: "plus.rectangle")
                     }
                 }
-            }
+            } .tint(.black)
         }
     }
     
-    private func moveItem(at sets:IndexSet,destination:Int){
+    internal func moveItem(at sets:IndexSet,destination:Int){
         let itemToMove = sets.first!
         
         if itemToMove < destination{
