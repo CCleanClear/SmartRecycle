@@ -145,58 +145,134 @@
 //    case gpt
 //}
 
-import SwiftUI
-import OpenAISwift
+//import OpenAISwift
+//import SwiftUI
+//
+//final class ViewModel: ObservableObject {
+//    init(){ }
+//    private var client: OpenAISwift?
+//    
+//    func setup(){
+//        
+////        client = OpenAISwift(config: OpenAISwift.Config.makeDefaultOpenAI(apiKey: "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"))
+//        let config = OpenAISwift.Config.makeDefaultOpenAI(apiKey: "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")
+//                self.client = OpenAISwift(config: config)
+//    }
+//    
+//    func send(text: String, completion: @escaping (String) -> Void) {
+//        client?.sendCompletion(with: text, maxTokens: 500, completionHandler: { result in
+//            switch result {
+//            case .success(let model):
+//                let output = model.choices?.first?.text ?? ""
+//                completion(output)
+//            case .failure:
+//                break
+//            }
+//        })
+//    }
+//}
+//
+//struct ChatbotView: View {
+//    @ObservedObject var viewModel = ViewModel()
+//    @State var text = ""
+//    @State var models = [String]()
+//    
+//    @Environment(\.verticalSizeClass) var verticalSizeClass
+//    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+//    
+//    
+//    var body: some View {
+//        VStack (alignment: .leading){
+//            ForEach(models, id: \.self) { string in
+//                Text(string)
+//            }
+//            
+//            Spacer()
+//            
+//            HStack{
+//                TextField("Type here...", text: $text)
+//                Button("Send") {
+//                    send()
+//                }
+//            }
+//        }
+//        .onAppear {
+//            viewModel.setup()
+//        }
+//        .padding()
+//    }
+//    
+//    func send() {
+//        guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
+//            return
+//        }
+//        models.append("Me: \(text)")
+//        viewModel.send(text: text) { response in
+//            DispatchQueue.main.async {
+//                self.models.append("ChatGPT: " + response)
+//                self.text = ""
+//            }
+//        }
+//    }
+//}
 
-final class ViewModel: ObservableObject {
-    init(){
-    }
-    private var client: OpenAISwift?
+
+import Foundation
+import ChatGPTSwift
+
+class ChatbotViewModel: ObservableObject {
+
+    let api = ChatGPTAPI(apiKey: "apikey")
+    @Published var messages = [Message]()
     
-    func setup(){
-        client = OpenAISwift(authToken: "dhkfhs")
-    }
-    
-    func send(text: String, completion： @escaping (String)-> Void) {
-        client?.sendCompletion(with: text, maxTokens: 500, completionHandler: { result in
-            switch result {
-            case .success(let model):
-                let output = model.choices?.first?.text ?? ""
-            case .failure:
-                break
+    func getResponse(text: String) async{
+        
+        self.addMessage(text, type: .text, isUserMessage: true)
+        self.addMessage("", type: .text, isUserMessage: false)
+
+        do {
+            let stream = try await api.sendMessageStream(text: text)
+
+            for try await line in stream {
+                DispatchQueue.main.async {
+                    
+                    self.messages[self.messages.count - 1].content = self.messages[self.messages.count - 1].content as! String + line
+                }
             }
-        })
+        } catch {
+            self.addMessage(error.localizedDescription, type: .error, isUserMessage: false)
+        }
     }
-}
-
-struct ChatbotView: View {
-    @ObservedObject var viewModel = ViewModel()
-    @State var text = ""
-    @State var models = [String]()
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    
-    
-    var body: some View {
-        VStack (alignment: .leading){
-            ForEach(models, id: \.self) { String in
-                Text(String)
+    private func addMessage(_ content: Any, type: MessageType, isUserMessage: Bool) {
+        DispatchQueue.main.async {
+            // if messages list is empty just addl new message
+            guard let lastMessage = self.messages.last else {
+                let message = Message(content: content, type: type, isUserMessage: isUserMessage)
+                self.messages.append(message)
+                return
+            }
+            let message = Message(content: content, type: type, isUserMessage: isUserMessage)
+            // if last message is an indicator switch with new one
+            if lastMessage.type == .indicator && !lastMessage.isUserMessage {
+                self.messages[self.messages.count - 1] = message
+            } else {
+                // otherwise, add new message to the end of the list
+                self.messages.append(message)
             }
             
-            Spacer()
-            
-            HStack{
-                TextField("Type here...", text: $text)
+            if self.messages.count > 100 {
+                self.messages.removeFirst()
             }
         }
-        .padding()
     }
+    
 }
 
-#Preview {
-   ChatbotView()
-}
+
+//#Preview {
+//   ChatbotViewModel()
+//}
 
 
 

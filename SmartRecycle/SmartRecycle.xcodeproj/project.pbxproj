@@ -30,7 +30,7 @@
 		996B2DBD2B4BC67F00C7570A /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */; };
 		996B2DBF2B4BC69700C7570A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DBE2B4BC69700C7570A /* Constants.swift */; };
 		996B2DC12B4BC8DD00C7570A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC02B4BC8DD00C7570A /* MapView.swift */; };
-		996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */; };
+		996B2DC32B4BFDDD00C7570A /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC22B4BFDDD00C7570A /* ChatbotViewModel.swift */; };
 		996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */; };
 		996B2DC82B4C0BE200C7570A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 996B2DC72B4C0BE200C7570A /* Alamofire */; };
 		996B2DCA2B4D1AD000C7570A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2DC92B4D1AD000C7570A /* CardView.swift */; };
@@ -42,6 +42,11 @@
 		996B2E812B51180B00C7570A /* ImageClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E802B51180B00C7570A /* ImageClassification.swift */; };
 		996B2E842B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		99EA392B2B5A9CEA00EE0AAD /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99EA392A2B5A9CEA00EE0AAD /* OpenAISwift */; };
+		99EA392E2B5B9DB100EE0AAD /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99EA392D2B5B9DB100EE0AAD /* ChatGPTSwift */; };
+		99EA39322B5B9E9400EE0AAD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39312B5B9E9400EE0AAD /* Message.swift */; };
+		99EA39352B5B9F3F00EE0AAD /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39342B5B9F3F00EE0AAD /* ChatbotView.swift */; };
+		99EA39382B5B9F9F00EE0AAD /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39372B5B9F9F00EE0AAD /* MessageView.swift */; };
+		99EA393A2B5B9FB900EE0AAD /* MessageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */; };
 		99F361242B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99F361222B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld */; };
 		99F361262B56B1B300A8D30B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361252B56B1B300A8D30B /* Persistence.swift */; };
 		99F361282B56B1D900A8D30B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361272B56B1D900A8D30B /* ListView.swift */; };
@@ -88,7 +93,7 @@
 		996B2DBC2B4BC67F00C7570A /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		996B2DBE2B4BC69700C7570A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		996B2DC02B4BC8DD00C7570A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
+		996B2DC22B4BFDDD00C7570A /* ChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewModel.swift; sourceTree = "<group>"; };
 		996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISerivce.swift; sourceTree = "<group>"; };
 		996B2DC92B4D1AD000C7570A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		996B2DCB2B4D1AEC00C7570A /* Recycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recycle.swift; sourceTree = "<group>"; };
@@ -99,6 +104,10 @@
 		996B2E802B51180B00C7570A /* ImageClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassification.swift; sourceTree = "<group>"; };
 		996B2E832B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		996B2E852B511BAD00C7570A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		99EA39312B5B9E9400EE0AAD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		99EA39342B5B9F3F00EE0AAD /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
+		99EA39372B5B9F9F00EE0AAD /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageIndicatorView.swift; sourceTree = "<group>"; };
 		99F361232B56B12800A8D30B /* Core_Data_Order_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Core_Data_Order_List.xcdatamodel; sourceTree = "<group>"; };
 		99F361252B56B1B300A8D30B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		99F361272B56B1D900A8D30B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -115,6 +124,7 @@
 				99223DA72B5509EB003D7D42 /* FirebaseFirestore in Frameworks */,
 				99223DAB2B5509EB003D7D42 /* FirebaseStorage in Frameworks */,
 				99EA392B2B5A9CEA00EE0AAD /* OpenAISwift in Frameworks */,
+				99EA392E2B5B9DB100EE0AAD /* ChatGPTSwift in Frameworks */,
 				99223DA92B5509EB003D7D42 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +310,9 @@
 		996B2E7D2B51178C00C7570A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				996B2DC22B4BFDDD00C7570A /* ChatbotView.swift */,
+				99EA39332B5B9F3000EE0AAD /* View */,
+				99EA39302B5B9E7A00EE0AAD /* Model */,
+				99EA392F2B5B9DF800EE0AAD /* ViewModel */,
 				996B2DC42B4C0A2800C7570A /* OpenAISerivce.swift */,
 			);
 			path = Chat;
@@ -323,6 +335,40 @@
 				996B2E742B51136600C7570A /* PlasticClassifier.mlmodel */,
 			);
 			path = PlassticClassification;
+			sourceTree = "<group>";
+		};
+		99EA392F2B5B9DF800EE0AAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				996B2DC22B4BFDDD00C7570A /* ChatbotViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		99EA39302B5B9E7A00EE0AAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99EA39312B5B9E9400EE0AAD /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99EA39332B5B9F3000EE0AAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99EA39362B5B9F8F00EE0AAD /* Message */,
+				99EA39342B5B9F3F00EE0AAD /* ChatbotView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99EA39362B5B9F8F00EE0AAD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				99EA39372B5B9F9F00EE0AAD /* MessageView.swift */,
+				99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +394,7 @@
 				99223DA82B5509EB003D7D42 /* FirebaseFirestoreSwift */,
 				99223DAA2B5509EB003D7D42 /* FirebaseStorage */,
 				99EA392A2B5A9CEA00EE0AAD /* OpenAISwift */,
+				99EA392D2B5B9DB100EE0AAD /* ChatGPTSwift */,
 			);
 			productName = SmartRecycle;
 			productReference = 996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */;
@@ -425,6 +472,7 @@
 				996B2DC62B4C0BE200C7570A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				99223DA32B5509EB003D7D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				99EA39292B5A9CEA00EE0AAD /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				99EA392C2B5B9DB100EE0AAD /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 			);
 			productRefGroup = 996B2D8E2B4BC5E100C7570A /* Products */;
 			projectDirPath = "";
@@ -479,10 +527,13 @@
 				996B2DC52B4C0A2800C7570A /* OpenAISerivce.swift in Sources */,
 				996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */,
 				996B2E842B51184B00C7570A /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				99EA39352B5B9F3F00EE0AAD /* ChatbotView.swift in Sources */,
 				99F3612A2B56B1F900A8D30B /* AddItemView.swift in Sources */,
 				996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */,
 				99F361242B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld in Sources */,
-				996B2DC32B4BFDDD00C7570A /* ChatbotView.swift in Sources */,
+				99EA39322B5B9E9400EE0AAD /* Message.swift in Sources */,
+				996B2DC32B4BFDDD00C7570A /* ChatbotViewModel.swift in Sources */,
+				99EA393A2B5B9FB900EE0AAD /* MessageIndicatorView.swift in Sources */,
 				996B2E772B51159500C7570A /* PlasticClassificationView.swift in Sources */,
 				99F361282B56B1D900A8D30B /* ListView.swift in Sources */,
 				99223DDB2B5660C1003D7D42 /* RegistrationView.swift in Sources */,
@@ -491,6 +542,7 @@
 				996B2DBB2B4BC60100C7570A /* NotesView.swift in Sources */,
 				99223DD02B566037003D7D42 /* InputView.swift in Sources */,
 				99F361262B56B1B300A8D30B /* Persistence.swift in Sources */,
+				99EA39382B5B9F9F00EE0AAD /* MessageView.swift in Sources */,
 				99223DD62B566084003D7D42 /* AuthViewModel.swift in Sources */,
 				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,
 				996B2E812B51180B00C7570A /* ImageClassification.swift in Sources */,
@@ -855,6 +907,14 @@
 				minimumVersion = 1.4.1;
 			};
 		};
+		99EA392C2B5B9DB100EE0AAD /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -887,6 +947,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99EA39292B5A9CEA00EE0AAD /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
+		};
+		99EA392D2B5B9DB100EE0AAD /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99EA392C2B5B9DB100EE0AAD /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
