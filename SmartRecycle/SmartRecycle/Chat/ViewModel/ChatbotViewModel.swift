@@ -222,7 +222,7 @@ import ChatGPTSwift
 
 class ChatbotViewModel: ObservableObject {
 
-    let api = ChatGPTAPI(apiKey: "apikey")
+    let api = ChatGPTAPI(apiKey: "api")
     @Published var messages = [Message]()
     
     func getResponse(text: String) async{
