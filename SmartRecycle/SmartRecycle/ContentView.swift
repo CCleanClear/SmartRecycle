@@ -23,7 +23,7 @@ struct ContentView: View {
                         }
                         .tag(0)
                         .opacity(selectedTab == 0 ? 1 : 0)
-                        .animation(.default)
+                        .animation(.easeInOut(duration: 0.3))
                     
                     NotesView()
                         .tabItem {
@@ -32,7 +32,7 @@ struct ContentView: View {
                         }
                         .tag(1)
                         .opacity(selectedTab == 1 ? 1 : 0)
-                        .animation(.default)
+                        .animation(.easeInOut(duration: 0.3))
                     
                     MapView()
                         .tabItem {
@@ -41,7 +41,7 @@ struct ContentView: View {
                         }
                         .tag(2)
                         .opacity(selectedTab == 2 ? 1 : 0)
-                        .animation(.default)
+                        .animation(.easeInOut(duration: 0.3))
                     
                     ChatbotView()
                         .tabItem {
@@ -50,7 +50,7 @@ struct ContentView: View {
                         }
                         .tag(3)
                         .opacity(selectedTab == 3 ? 1 : 0)
-                        .animation(.default)
+                        .animation(.easeInOut(duration: 0.3))
                     
                     ProfileView()
                         .tabItem {
@@ -59,10 +59,10 @@ struct ContentView: View {
                         }
                         .tag(4)
                         .opacity(selectedTab == 4 ? 1 : 0)
-                        .animation(.default)
+                        .animation(.easeInOut(duration: 0.3))
                 }
                 .onAppear {
-                    selectedTab = 0 // Set initial selected tab
+                    selectedTab = 0 
                 }
             } else {
                 LoginView()
