@@ -32,7 +32,18 @@ final class RegistraorTest: XCTestCase {
         let uNameRule = register.NameRule(userName: userNmae)
         let expected = "John Chan"
         
-        XCTAssertEqual(userNmae, expected, "Test Failed")
+        XCTAssertEqual(userNmae, expected, "Test Success")
+        
+    }
+    
+    func RegisterNameMax() throws {
+        let register = RegistrationView()
+        let userName = String(repeating: "a", count: 21)
+        
+        let uNameRule = register.NameRule(userName: userName)
+        let expected = "Over maximum limit"
+        
+        XCTAssertEqual(userName, expected, "Test Failed")
         
     }
 
