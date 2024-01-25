@@ -10,20 +10,20 @@
 import SwiftUI
 
 struct RecycleView: View {
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrienation
+    @Environment(\.horizontalSizeClass) var horizontalOrienatation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrienatation == .compact && verticalOrienation == .regular {
+            verticalDesign
             
         } else {
-            horizontalLayout
+            horizontalDesign
         }
         
     }
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         NavigationView{
             ScrollView{
                 // VStack{
@@ -63,7 +63,7 @@ struct RecycleView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         NavigationView{
             ScrollView{
                 ForEach(recycles,id: \.self) {recycle in

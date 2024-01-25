@@ -40,21 +40,21 @@ struct NotesView: View {
     @State private var selectedColor: Color = .red
     @State private var thickness: Double = 1.0
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrientation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
         
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrientation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
         
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         
         VStack {
             Canvas { context, size in
@@ -96,7 +96,7 @@ struct NotesView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         VStack {
             Canvas { context, size in
                 for line in lines {

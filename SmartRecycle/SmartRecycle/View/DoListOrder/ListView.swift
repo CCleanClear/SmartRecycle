@@ -20,19 +20,19 @@ struct ListView: View {
     
     @State private var addItemView = false
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrienation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrienation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
@@ -67,7 +67,7 @@ struct ListView: View {
     
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         NavigationView {
             List {
                 ForEach(items) { item in

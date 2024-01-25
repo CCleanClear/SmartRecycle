@@ -12,19 +12,19 @@ import SwiftUI
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrienatation
+    @Environment(\.horizontalSizeClass) var horizontalOrienatation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrienatation == .compact && verticalOrienatation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         if let user = viewModel.currentUser{
             HStack{
                 List{
@@ -76,7 +76,7 @@ struct ProfileView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         if let user = viewModel.currentUser{
             List{
                 Section{

@@ -64,19 +64,19 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrientation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrientation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         ZStack (alignment: .bottom){
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
                 MapAnnotation(coordinate: place.coordinate) {
@@ -114,7 +114,7 @@ struct MapView: View {
     
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         ZStack (alignment: .bottom){
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
                 MapAnnotation(coordinate: place.coordinate) {

@@ -16,19 +16,19 @@ struct ChatbotView: View {
     @Namespace var bottomID
     @FocusState private var fieldIsFocused: Bool
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrientation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrientation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         NavigationView(){
             VStack(alignment: .leading){
                 if !gpt3ViewModel.messages.isEmpty{
@@ -109,7 +109,7 @@ struct ChatbotView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         NavigationView(){
             VStack(alignment: .leading){
                 if !gpt3ViewModel.messages.isEmpty{

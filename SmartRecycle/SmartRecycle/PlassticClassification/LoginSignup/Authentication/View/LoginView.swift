@@ -14,20 +14,20 @@ struct LoginView: View {
     @State private var password = ""
     @EnvironmentObject var viewModel: AuthViewModel
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrientation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
         
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrientation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         NavigationStack{
             HStack (spacing: 10) {
                 VStack(alignment: .leading, spacing: 10) {
@@ -94,7 +94,7 @@ struct LoginView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Smart Recycle")
                 .font(.title.bold())

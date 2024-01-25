@@ -18,20 +18,20 @@ struct RegistrationView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrientation
+    @Environment(\.horizontalSizeClass) var horizontalOrientation
     
     var body: some View {
         
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrientation == .compact && verticalOrientation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         HStack{
             VStack{
                 // image
@@ -79,7 +79,7 @@ struct RegistrationView: View {
                 HStack{
                     //sign in button
                     Button{
-                        fullName = NameRule(userName: fullName)
+                        fullName = NameRequire(userName: fullName)
                         Task{
                             try await viewModel.createUser(withEmail:email,
                                                            password:password,
@@ -118,7 +118,7 @@ struct RegistrationView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         VStack{
             // image
             Image("1024")
@@ -167,7 +167,7 @@ struct RegistrationView: View {
             
             //sign in button
             Button{
-                fullName = NameRule(userName: fullName)
+                fullName = NameRequire(userName: fullName)
                 Task{
                     try await viewModel.createUser(withEmail:email,
                                                    password:password,
@@ -201,11 +201,11 @@ struct RegistrationView: View {
         }
     }
     
-    func NameRule(userName: String) -> String {
-        if userName.count <= 0 {
-            return "Please input name"
-        } else if userName.count > 20 {
-            return "Over maximum limit"
+    func NameRequire(userName: String) -> String {
+        if userName.isEmpty ==  true{
+            return "Please enter name"
+        } else if userName.count > 15 {
+            return "Character limit exceeded"
         } else {
             return userName
         }

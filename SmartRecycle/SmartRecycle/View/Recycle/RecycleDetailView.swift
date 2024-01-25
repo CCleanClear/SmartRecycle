@@ -11,19 +11,19 @@ struct RecycleDetailView: View {
     var recycle : Recycle
     @Environment(\.dismiss) var dismiss
     
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalOrienatation
+    @Environment(\.horizontalSizeClass) var horizontalOrienatation
     
     var body: some View {
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
+        if horizontalOrienatation == .compact && verticalOrienatation == .regular {
+            verticalDesign
         } else {
-            horizontalLayout
+            horizontalDesign
         }
     }
     
     @ViewBuilder
-    private var horizontalLayout: some View {
+    private var horizontalDesign: some View {
         ScrollView{
             HStack {
                 VStack (alignment: .leading, spacing: 5) {
@@ -46,7 +46,7 @@ struct RecycleDetailView: View {
     }
     
     @ViewBuilder
-    private var verticalLayout: some View {
+    private var verticalDesign: some View {
         ScrollView{
             VStack{
                 VStack (alignment: .leading) {
