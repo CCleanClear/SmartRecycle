@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 20/1/2024.
 //
 
+//MARK: Source Code follow to GitHub "SwiftGPT" https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
+
 import SwiftUI
 
 struct MessageView: View {
@@ -26,12 +28,12 @@ struct MessageView: View {
 
                     switch message.type {
                     case .text:
-                        let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\"")))
+                        let output = (message.content as! String)//.trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\"")))
                         Text(output)
                             .padding([.vertical, .horizontal],5)
                             .textSelection(.enabled)
                     case .error:
-                        let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
+                        let output = (message.content as! String)//.trimmingCharacters(in: .whitespacesAndNewlines.union(.init(charactersIn: "\"")))
                         Text(output)
                             .foregroundColor(.red)
                             .textSelection(.enabled)

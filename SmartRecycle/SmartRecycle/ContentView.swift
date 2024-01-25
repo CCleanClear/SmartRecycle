@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
+//MARK: (AuthViewModel)Source Code follow to Youtube "COMPLETE User Login / Sign Up App | Swift UI + Firebase | Async / Await" https://www.youtube.com/watch?v=QJHmhLGv-_0&list=WL&index=19&t=4624s
+
 import SwiftUI
 import Combine
 
@@ -14,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if $viewModel.userSession != nil {
+            if viewModel.userSession != nil {
                 TabView(selection: $selectedTab) {
                     RecycleView()
                         .tabItem {

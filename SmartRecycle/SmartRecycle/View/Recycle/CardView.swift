@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 9/1/2024.
 //
 
+//MARK: Source Code follow to Youtube "Simple CardView Screen Design in SwiftUI" https://www.youtube.com/watch?v=af1KHNuSCUA&list=WL&index=13
+
 import SwiftUI
 
 struct CardView: View {

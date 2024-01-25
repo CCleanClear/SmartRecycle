@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 12/1/2024.
 //
 
+//MARK: Source Code follow to GitHub "Vision-ML-SwiftUI" https://github.com/Shakshi3104/Vision-ML-SwiftUI
+
 import Foundation
 import UIKit
 import ImageIO

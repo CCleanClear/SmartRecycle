@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
+//MARK: Source Code follow to Youtube "Creating Drawing App in SwiftUI" https://www.youtube.com/watch?v=P0OdY9MVu_g&list=WL&index=16&t=754s
+
 import Foundation
 
 struct Constants {

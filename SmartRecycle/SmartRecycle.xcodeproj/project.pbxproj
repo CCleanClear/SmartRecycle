@@ -22,6 +22,7 @@
 		995944DC2B5F9E5600996091 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995944DB2B5F9E5600996091 /* ProfileView.swift */; };
 		995944DE2B5F9EBD00996091 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995944DD2B5F9EBD00996091 /* AuthViewModel.swift */; };
 		995944E02B5F9F2000996091 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995944DF2B5F9F2000996091 /* User.swift */; };
+		995944E22B6161D300996091 /* MessageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995944E12B6161D300996091 /* MessageIndicatorView.swift */; };
 		996B2D912B4BC5E100C7570A /* SmartRecycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */; };
 		996B2D932B4BC5E100C7570A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B2D922B4BC5E100C7570A /* ContentView.swift */; };
 		996B2D952B4BC5E300C7570A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996B2D942B4BC5E300C7570A /* Assets.xcassets */; };
@@ -48,7 +49,6 @@
 		99EA39322B5B9E9400EE0AAD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39312B5B9E9400EE0AAD /* Message.swift */; };
 		99EA39352B5B9F3F00EE0AAD /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39342B5B9F3F00EE0AAD /* ChatbotView.swift */; };
 		99EA39382B5B9F9F00EE0AAD /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39372B5B9F9F00EE0AAD /* MessageView.swift */; };
-		99EA393A2B5B9FB900EE0AAD /* MessageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */; };
 		99F361242B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99F361222B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld */; };
 		99F361262B56B1B300A8D30B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361252B56B1B300A8D30B /* Persistence.swift */; };
 		99F361282B56B1D900A8D30B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F361272B56B1D900A8D30B /* ListView.swift */; };
@@ -84,6 +84,7 @@
 		995944DB2B5F9E5600996091 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		995944DD2B5F9EBD00996091 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		995944DF2B5F9F2000996091 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		995944E12B6161D300996091 /* MessageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIndicatorView.swift; sourceTree = "<group>"; };
 		996B2D8D2B4BC5E100C7570A /* SmartRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996B2D902B4BC5E100C7570A /* SmartRecycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartRecycleApp.swift; sourceTree = "<group>"; };
 		996B2D922B4BC5E100C7570A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		99EA39312B5B9E9400EE0AAD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		99EA39342B5B9F3F00EE0AAD /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		99EA39372B5B9F9F00EE0AAD /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageIndicatorView.swift; sourceTree = "<group>"; };
 		99F361232B56B12800A8D30B /* Core_Data_Order_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Core_Data_Order_List.xcdatamodel; sourceTree = "<group>"; };
 		99F361252B56B1B300A8D30B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		99F361272B56B1D900A8D30B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -372,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				99EA39372B5B9F9F00EE0AAD /* MessageView.swift */,
-				99EA39392B5B9FB900EE0AAD /* MessageIndicatorView.swift */,
+				995944E12B6161D300996091 /* MessageIndicatorView.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -537,7 +537,6 @@
 				99F361242B56B12800A8D30B /* Core_Data_Order_List.xcdatamodeld in Sources */,
 				99EA39322B5B9E9400EE0AAD /* Message.swift in Sources */,
 				996B2DC32B4BFDDD00C7570A /* ChatbotViewModel.swift in Sources */,
-				99EA393A2B5B9FB900EE0AAD /* MessageIndicatorView.swift in Sources */,
 				995944CD2B5F9D7E00996091 /* SettingRowView.swift in Sources */,
 				995944D92B5F9E3500996091 /* RegistrationView.swift in Sources */,
 				996B2E772B51159500C7570A /* PlasticClassificationView.swift in Sources */,
@@ -548,6 +547,7 @@
 				995944DC2B5F9E5600996091 /* ProfileView.swift in Sources */,
 				99F361262B56B1B300A8D30B /* Persistence.swift in Sources */,
 				995944D82B5F9E3500996091 /* LoginView.swift in Sources */,
+				995944E22B6161D300996091 /* MessageIndicatorView.swift in Sources */,
 				99EA39382B5B9F9F00EE0AAD /* MessageView.swift in Sources */,
 				995944DE2B5F9EBD00996091 /* AuthViewModel.swift in Sources */,
 				996B2DCC2B4D1AEC00C7570A /* Recycle.swift in Sources */,

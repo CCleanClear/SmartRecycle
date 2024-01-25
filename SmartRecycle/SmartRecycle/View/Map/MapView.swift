@@ -5,6 +5,9 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
+//MARK: (Map) Source Code follow to Youtube "Custom Annotations for Maps in SwiftUI" https://www.youtube.com/watch?v=Scver650hQc&list=WL&index=1&t=27s
+//MARK: (GPS UserLocation) Source Code follow to Youtube "SwiftUI LocationButton - Get User Location | iOS 15" https://www.youtube.com/watch?v=P6ZUiH1IZlQ&list=WL&index=5&t=689s
+
 import SwiftUI
 import MapKit
 import CoreLocationUI

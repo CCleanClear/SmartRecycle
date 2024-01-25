@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 16/1/2024.
 //
 
+//MARK: Source Code follow to Youtube "COMPLETE User Login / Sign Up App | Swift UI + Firebase | Async / Await" https://www.youtube.com/watch?v=QJHmhLGv-_0&list=WL&index=19&t=4624s
+
 import SwiftUI
 
 struct RegistrationView: View {
@@ -111,7 +113,7 @@ struct RegistrationView: View {
                     .padding(.bottom,3)
                 }
             }.padding(.horizontal, 10)
-                .padding(.top, 50)
+                .padding(.top, 30)
         }
     }
     
@@ -122,7 +124,7 @@ struct RegistrationView: View {
             Image("1024")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 120, height: 120)
+                .frame(width: 100, height: 100)
                 .padding(.vertical,32)
             
             VStack(spacing:24){
@@ -183,9 +185,7 @@ struct RegistrationView: View {
             .cornerRadius(10)
             .disabled(!formIsValid)
             .opacity(formIsValid ? 1.0 : 0.5)
-            .padding(.top,24)
-            
-            Spacer()
+            .padding(.top,10)
             
             Button{
                 dismiss()

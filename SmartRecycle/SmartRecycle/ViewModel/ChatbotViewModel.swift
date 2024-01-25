@@ -5,12 +5,14 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
+//MARK: Source Code follow to GitHub "SwiftGPT" https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
+
 import Foundation
 import ChatGPTSwift
 
 class ChatbotViewModel: ObservableObject {
 
-    let api = ChatGPTAPI(apiKey: "apikey")
+    let api = ChatGPTAPI(apiKey: "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")
     @Published var messages = [Message]()
     
     func getResponse(text: String) async{
@@ -23,8 +25,7 @@ class ChatbotViewModel: ObservableObject {
 
             for try await line in stream {
                 DispatchQueue.main.async {
-                    
-                     self.messages[self.messages.count - 1].content = self.messages[self.messages.count - 1].content as! String + line
+                    self.messages[self.messages.count - 1].content = self.messages[self.messages.count - 1].content as! String + line
                 }
                 
             }
@@ -47,7 +48,7 @@ class ChatbotViewModel: ObservableObject {
                 self.messages.append(message)
             }
             
-            if self.messages.count > 100 {
+            if self.messages.count > 600 {
                 self.messages.removeFirst()
             }
         }

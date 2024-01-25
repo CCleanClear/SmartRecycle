@@ -5,6 +5,8 @@
 //  Created by Crystal Chan on 20/1/2024.
 //
 
+//MARK: Source Code follow to GitHub "SwiftGPT" https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
+
 import Foundation
 import UIKit
 import SwiftUI

@@ -1,9 +1,11 @@
 //
-//  MessageIndicatorView.swift
+//  MessageIndicator.swift
 //  SmartRecycle
 //
 //  Created by Crystal Chan on 20/1/2024.
 //
+
+//MARK: Source Code follow to GitHub "SwiftGPT" https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
 
 import SwiftUI
 
@@ -36,6 +38,8 @@ struct DotView: View {
     }
 }
 
-#Preview {
-    MessageIndicatorView()
+struct MessageIndicatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        MessageIndicatorView()
+    }
 }
