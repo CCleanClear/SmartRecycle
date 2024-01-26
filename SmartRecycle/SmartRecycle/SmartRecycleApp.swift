@@ -5,9 +5,9 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
-//MARK: (AuthViewModel)Source Code follow to Youtube "COMPLETE User Login / Sign Up App | Swift UI + Firebase | Async / Await" https://www.youtube.com/watch?v=QJHmhLGv-_0&list=WL&index=19&t=4624s
+//MARK: (AuthViewModel) Source Code is based on YouTube "COMPLETE User Login / Sign Up App | Swift UI + Firebase | Async / Await" - https://www.youtube.com/watch?v=QJHmhLGv-_0&list=WL&index=19&t=4624s
 
-//MARK: (Persisitence)Source Code follow to Youtube "Core Data Re-Ordered List Row / Move Row : SwiftUI" https://www.youtube.com/watch?v=Rh05puZsh6o&list=WL&index=9&t=28s
+//MARK: (Persisitence) Source Code is based on YouTube "Core Data Re-Ordered List Row / Move Row : SwiftUI" - https://www.youtube.com/watch?v=Rh05puZsh6o&list=WL&index=9&t=28s
 
 import SwiftUI
 import Firebase

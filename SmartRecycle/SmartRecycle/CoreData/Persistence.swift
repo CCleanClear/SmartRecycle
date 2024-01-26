@@ -5,7 +5,7 @@
 //  Created by Crystal Chan on 16/1/2024.
 //
 
-//MARK: Source Code follow to Youtube "Core Data Re-Ordered List Row / Move Row : SwiftUI" https://www.youtube.com/watch?v=Rh05puZsh6o&list=WL&index=9&t=28s
+//MARK: Source Code is based on YouTube "Core Data Re-Ordered List Row / Move Row : SwiftUI" -  https://www.youtube.com/watch?v=Rh05puZsh6o&list=WL&index=9&t=28s
 
 import CoreData
 

@@ -5,7 +5,7 @@
 //  Created by Crystal Chan on 8/1/2024.
 //
 
-//MARK: Source Code follow to GitHub "SwiftGPT" https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
+//MARK: Source Code is based on GitHub "SwiftGPT" - https://github.com/mbabicz/SwiftGPT?tab=readme-ov-file
 
 import Foundation
 import ChatGPTSwift
